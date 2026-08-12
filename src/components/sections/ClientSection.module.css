@@ -1,0 +1,57 @@
+.eyebrow {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: 32px;
+}
+
+.viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll var(--marquee-duration) linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+.row {
+  display: flex;
+  gap: 64px;
+  list-style: none;
+  margin: 0;
+  padding: 0 32px 0 0;
+}
+
+.item {
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  color: var(--fg-muted);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Shifts by exactly half the duplicated track, so the loop is seamless. */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

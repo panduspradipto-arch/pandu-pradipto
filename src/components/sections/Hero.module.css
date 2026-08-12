@@ -1,0 +1,133 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: var(--hero-min-h);
+  width: 100%;
+  /* Clips the media's entrance scale so no edge is ever exposed. */
+  overflow: hidden;
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+  animation: hero-media 900ms var(--ease) both;
+}
+
+/*
+ * The hero is immediately available: media settles from a 1.03 push-in while
+ * the copy lifts in just behind it. Nothing gates the page.
+ */
+@keyframes hero-media {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-copy {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*
+ * Same motion as hero-copy, but resolving to the status line's approved 0.75.
+ * `animation-fill-mode: both` retains the final keyframe, so a shared `to
+ * { opacity: 1 }` would silently override the declared value.
+ */
+@keyframes hero-status {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 0.75;
+    transform: none;
+  }
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--scrim-hero);
+}
+
+.status {
+  position: absolute;
+  top: 110px;
+  right: var(--gutter);
+  text-align: right;
+  pointer-events: none;
+  font-size: var(--text-eyebrow);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+  opacity: 0.75;
+  animation: hero-status 700ms var(--ease) 200ms both;
+}
+
+.content {
+  position: absolute;
+  bottom: 64px;
+  left: var(--gutter);
+  right: var(--gutter);
+  max-width: var(--measure-hero);
+  animation: hero-copy 700ms var(--ease) 120ms both;
+}
+
+.headline {
+  font-size: var(--text-display-xl);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--ls-display);
+  line-height: var(--lh-display);
+  margin: 0 0 24px;
+  text-transform: uppercase;
+}
+
+.lead {
+  font-size: var(--text-lead);
+  font-weight: var(--weight-medium);
+  max-width: var(--measure-lead);
+  line-height: var(--lh-lead);
+  margin: 0 0 36px;
+  opacity: 0.85;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* End states are the visible states, so removing the animation is safe. */
+@media (prefers-reduced-motion: reduce) {
+  .media,
+  .content,
+  .status {
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 560px;
+  }
+
+  .content {
+    bottom: 44px;
+  }
+
+  .status {
+    top: 92px;
+  }
+}

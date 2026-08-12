@@ -1,0 +1,21 @@
+.page {
+  animation: page-enter 380ms var(--ease) both;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* End state is the visible state, so skipping the animation is safe. */
+@media (prefers-reduced-motion: reduce) {
+  .page {
+    animation: none;
+  }
+}

@@ -1,0 +1,157 @@
+/*
+ * Design tokens — extracted verbatim from the approved design
+ * (Claude Design project "Creative producer portfolio direction", Homepage.dc.html).
+ *
+ * These are the source of truth. Components reference tokens only; no component
+ * should hardcode a hex value or a raw pixel size that belongs here.
+ */
+
+:root {
+  /* ---- Color: default (dark) context ---- */
+  --color-ink: #0b0b0a;
+  --color-paper: #f6f4ef;
+  --color-muted: #8a8a85;
+  --color-meta: #c9c7be;
+  --color-body: #d8d6cd;
+  --color-muted-on-paper: #5a5a55;
+
+  /* Contextual aliases. Sections flip these rather than restyling children. */
+  --bg: var(--color-ink);
+  --fg: var(--color-paper);
+  --fg-muted: var(--color-muted);
+  --fg-meta: var(--color-meta);
+  --fg-body: var(--color-body);
+
+  --rule: rgba(246, 244, 239, 0.12);
+  --rule-strong: rgba(246, 244, 239, 0.18);
+  --rule-hairline: rgba(246, 244, 239, 0.5);
+
+  /* Scrims over media — the design uses two stops depending on card height. */
+  --scrim-hero: linear-gradient(
+    180deg,
+    rgba(11, 11, 10, 0.1) 0%,
+    rgba(11, 11, 10, 0.05) 40%,
+    rgba(11, 11, 10, 0.92) 100%
+  );
+  --scrim-card: linear-gradient(180deg, transparent 40%, rgba(11, 11, 10, 0.85) 100%);
+  --scrim-card-tall: linear-gradient(180deg, transparent 45%, rgba(11, 11, 10, 0.85) 100%);
+  --scrim-card-short: linear-gradient(180deg, transparent 40%, rgba(11, 11, 10, 0.88) 100%);
+
+  /* ---- Type ---- */
+  --font-sans: var(--font-instrument-sans), "Instrument Sans", system-ui, sans-serif;
+
+  --text-display-xl: clamp(52px, 9vw, 140px);
+  --text-display-l: clamp(42px, 7vw, 96px);
+  --text-section: clamp(32px, 4.5vw, 52px);
+  --text-about: clamp(30px, 3.6vw, 44px);
+  --text-project-xl: clamp(28px, 3.4vw, 44px);
+  --text-project-lg: clamp(22px, 2.6vw, 32px);
+  --text-project-md: clamp(20px, 2.2vw, 26px);
+  --text-project-sm: 19px;
+  --text-service: clamp(20px, 2.4vw, 28px);
+  --text-lead: 17px;
+  --text-body-l: 18px;
+  --text-step: 18px;
+  --text-body: 16px;
+  --text-body-s: 14px;
+  --text-label: 13px;
+  --text-meta: 12px;
+  --text-eyebrow: 11px;
+
+  --lh-display: 0.95;
+  --lh-cta: 1;
+  --lh-snug: 1.1;
+  --lh-lead: 1.5;
+  --lh-body: 1.6;
+
+  --ls-display: -0.02em;
+  --ls-section: -0.01em;
+  --ls-label: 0.04em;
+  --ls-footer: 0.05em;
+  --ls-meta: 0.06em;
+  --ls-nav: 0.08em;
+
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ---- Layout ---- */
+  --gutter: 48px;
+  --section-y: 140px;
+  --measure-text: 1100px;
+  --measure-hero: 1100px;
+  --measure-lead: 507px;
+  --measure-body: 440px;
+  --grid-gap: 2px;
+
+  /* Card heights, per row rank in the editorial grid. */
+  --card-h-xl: 640px;
+  --card-h-lg: 520px;
+  --card-h-sm: 360px;
+  --hero-min-h: 640px;
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  /*
+   * Scaled with the roster, not fixed. The marquee travels half its duplicated
+   * track per cycle, so duration must track content length or scroll speed
+   * changes with it: 7 names over 45s ≈ 19px/s, and 25 names needs ~160s to
+   * hold that same pace.
+   */
+  --marquee-duration: 160s;
+}
+
+/*
+ * Inverted context — the CTA and footer sit on paper.
+ * Applied as a class so any section can opt in without restyling its children.
+ */
+.on-paper {
+  --bg: var(--color-paper);
+  --fg: var(--color-ink);
+  --fg-muted: var(--color-muted-on-paper);
+  --fg-meta: var(--color-muted-on-paper);
+  --fg-body: var(--color-muted-on-paper);
+  --rule: rgba(11, 11, 10, 0.12);
+  --rule-strong: rgba(11, 11, 10, 0.18);
+  --rule-hairline: rgba(11, 11, 10, 0.5);
+}
+
+/*
+ * The approved design specifies desktop only. These frame heights are tuned to
+ * keep the stills dominant at smaller widths rather than to preserve the
+ * desktop ratios — a short, wide frame reads as a banner, not as work.
+ */
+@media (max-width: 900px) {
+  :root {
+    --gutter: 32px;
+    --section-y: 96px;
+    --card-h-xl: 520px;
+    --card-h-lg: 460px;
+    --card-h-sm: 340px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --gutter: 20px;
+    --section-y: 72px;
+    --card-h-xl: 440px;
+    --card-h-lg: 400px;
+    --card-h-sm: 360px;
+  }
+}
+
+/*
+ * Sub-360px only. The hero headline's clamp floor of 52px renders "Produced."
+ * at 300px, which exceeds the 280px measure at 320px wide and pushes the word
+ * flush to the viewport edge, erasing the gutter. The gutter holds from 340px
+ * up, so this affects the narrowest phones alone — 375px and above are
+ * untouched, and only --text-display-xl (the homepage hero) is involved.
+ */
+@media (max-width: 359px) {
+  :root {
+    --text-display-xl: 46px;
+  }
+}

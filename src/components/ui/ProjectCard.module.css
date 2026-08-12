@@ -1,0 +1,172 @@
+.card {
+  position: relative;
+  width: 100%;
+}
+
+.link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+}
+
+.media :global(img) {
+  transition: transform var(--duration-slow, 500ms) var(--ease);
+}
+
+/* Container is clipped, so the frame never changes layout dimensions. */
+.link:hover .media :global(img) {
+  transform: scale(1.04);
+}
+
+/*
+ * Metadata lifts slightly on hover; the title is deliberately left alone so the
+ * card's anchor point stays fixed.
+ */
+.meta {
+  transition: color var(--duration-base) var(--ease);
+}
+
+.link:hover .meta {
+  color: var(--color-paper);
+}
+
+/* Hover is a pointer affordance — never bind it to touch. */
+@media (hover: none) {
+  .link:hover .media :global(img) {
+    transform: none;
+  }
+
+  .link:hover .meta {
+    color: var(--fg-meta);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .media :global(img),
+  .link:hover .media :global(img) {
+    transform: none;
+    transition: none;
+  }
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--scrim-card);
+}
+
+.caption {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.title {
+  display: block;
+  font-weight: var(--weight-bold);
+  color: var(--color-paper);
+}
+
+/* ---- Size ranks ---- */
+
+.xl {
+  height: var(--card-h-xl);
+}
+
+.xl .caption {
+  left: 36px;
+  bottom: 32px;
+  right: 36px;
+}
+
+.xl .meta {
+  margin-bottom: 10px;
+}
+
+.xl .title {
+  font-size: var(--text-project-xl);
+}
+
+.lg {
+  height: var(--card-h-lg);
+}
+
+.lg .caption {
+  left: 32px;
+  bottom: 28px;
+  right: 32px;
+}
+
+.lg .scrim {
+  background: var(--scrim-card-tall);
+}
+
+.lg .meta {
+  margin-bottom: 8px;
+}
+
+.lg .title {
+  font-size: var(--text-project-lg);
+}
+
+.md {
+  height: var(--card-h-lg);
+}
+
+.md .caption {
+  left: 28px;
+  bottom: 28px;
+  right: 28px;
+}
+
+.md .scrim {
+  background: var(--scrim-card-tall);
+}
+
+.md .meta {
+  margin-bottom: 8px;
+}
+
+.md .title {
+  font-size: var(--text-project-md);
+}
+
+.sm {
+  height: var(--card-h-sm);
+}
+
+.sm .caption {
+  left: 24px;
+  bottom: 22px;
+  right: 24px;
+}
+
+.sm .scrim {
+  background: var(--scrim-card-short);
+}
+
+.sm .meta {
+  margin-bottom: 6px;
+}
+
+.sm .title {
+  font-size: var(--text-project-sm);
+}
+
+@media (max-width: 600px) {
+  .xl .caption,
+  .lg .caption,
+  .md .caption {
+    left: 20px;
+    right: 20px;
+    bottom: 22px;
+  }
+}

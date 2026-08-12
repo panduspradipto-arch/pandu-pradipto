@@ -1,0 +1,53 @@
+.opening {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: var(--section-y) var(--gutter) var(--section-y) 0;
+}
+
+/* Bleeds off the left edge rather than sitting inside the gutter. */
+.portrait {
+  height: 720px;
+}
+
+.copy {
+  max-width: 520px;
+}
+
+.eyebrow {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: 24px;
+}
+
+.statement {
+  font-size: var(--text-about);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--ls-section);
+  line-height: var(--lh-snug);
+  text-transform: uppercase;
+  color: var(--fg);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .opening {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 0 var(--section-y);
+  }
+
+  .portrait {
+    height: 70vh;
+    min-height: 420px;
+  }
+
+  .copy {
+    padding: 0 var(--gutter);
+    max-width: none;
+  }
+}

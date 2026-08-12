@@ -1,0 +1,82 @@
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 32px;
+  padding: 32px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.label {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin: 0;
+}
+
+/* A plain wrapped run, not chips and not a bulleted list. */
+.disciplines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+}
+
+.discipline {
+  font-size: var(--text-body-l);
+  color: var(--fg-body);
+}
+
+.credits {
+  margin: 0;
+}
+
+.credit {
+  display: flex;
+  gap: 24px;
+  padding: 6px 0;
+}
+
+.creditRole {
+  font-size: var(--text-body-s);
+  color: var(--fg-muted);
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.creditName {
+  margin: 0;
+  font-size: var(--text-body-s);
+  font-weight: var(--weight-medium);
+  color: var(--fg);
+}
+
+@media (max-width: 700px) {
+  .block {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .credit {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .creditRole {
+    width: auto;
+  }
+}

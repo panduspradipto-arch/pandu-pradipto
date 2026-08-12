@@ -1,0 +1,48 @@
+.slot {
+  position: relative;
+  overflow: hidden;
+  background: #141312;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.grayscale .image {
+  filter: grayscale(1);
+}
+
+/*
+ * Placeholder treatment: a diagonal hatch and a label, no frame.
+ *
+ * Deliberately borderless — the imagery is meant to dominate, and with no real
+ * stills yet a hairline on every slot would turn the whole grid into boxes. The
+ * hatch alone separates one empty frame from the next across the 2px gaps.
+ */
+.slot[data-placeholder="true"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4, 16px);
+  background-color: #141312;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(246, 244, 239, 0.03) 0px,
+    rgba(246, 244, 239, 0.03) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+}
+
+.placeholderLabel {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  color: var(--color-muted);
+  text-align: center;
+  max-width: 24ch;
+  line-height: 1.5;
+}

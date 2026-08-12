@@ -1,0 +1,54 @@
+.editorial {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap);
+}
+
+.row {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+/* Single full-bleed frame. */
+.row[data-shape="xl"] {
+  grid-template-columns: 1fr;
+}
+
+/* The 60/40 pair. */
+.row[data-shape="lg-md"] {
+  grid-template-columns: 1.4fr 1fr;
+}
+
+/* Three-up. */
+.row[data-shape="sm-sm-sm"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+}
+
+/*
+ * Tablet: the 60/40 pair stacks rather than compressing. Two full-width frames
+ * carry the work better than a 1.4fr/1fr split does at this size, which is the
+ * whole point of the grid — the imagery leads.
+ */
+@media (max-width: 900px) {
+  .row[data-shape="lg-md"] {
+    grid-template-columns: 1fr;
+  }
+
+  .row[data-shape="sm-sm-sm"],
+  .catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .row[data-shape="sm-sm-sm"],
+  .catalog {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,15 @@
+.heading {
+  margin-bottom: 56px;
+}
+
+.action {
+  font-size: var(--text-label);
+  font-weight: var(--weight-semibold);
+  color: var(--fg-muted);
+  text-decoration: underline;
+  transition: color var(--duration-base) var(--ease);
+}
+
+.action:hover {
+  color: var(--fg);
+}

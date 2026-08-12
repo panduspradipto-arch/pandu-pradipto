@@ -1,0 +1,46 @@
+.heading {
+  margin-bottom: 40px;
+}
+
+.summary {
+  font-size: var(--text-service);
+  font-weight: var(--weight-medium);
+  line-height: 1.35;
+  letter-spacing: var(--ls-section);
+  max-width: 720px;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  margin: 56px 0 0;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metricValue {
+  font-size: var(--text-project-lg);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--ls-section);
+  color: var(--fg);
+}
+
+.metricLabel {
+  margin: 0;
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+@media (max-width: 600px) {
+  .metrics {
+    gap: 32px;
+  }
+}

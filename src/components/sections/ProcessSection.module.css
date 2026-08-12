@@ -1,0 +1,91 @@
+.heading {
+  margin-bottom: 64px;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Every step after the first absorbs the free space and spends it on its
+ * leading connector rule, so the track stretches edge to edge.
+ */
+.step {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.step:first-child {
+  flex: 0 0 auto;
+}
+
+.step::before {
+  content: "";
+  height: 1px;
+  background: var(--rule-strong);
+  flex: 1;
+  margin: 0 24px;
+}
+
+.step:first-child::before {
+  display: none;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.num {
+  font-size: var(--text-label);
+  font-weight: var(--weight-semibold);
+  color: var(--fg-muted);
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: var(--text-step);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Narrow: the track becomes a rule-separated stack. */
+@media (max-width: 800px) {
+  .track {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .step,
+  .step:first-child {
+    flex: 0 0 auto;
+    border-top: 1px solid var(--rule);
+  }
+
+  .step::before {
+    display: none;
+  }
+
+  .stack {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 20px;
+    padding: 18px 0;
+    text-align: left;
+  }
+
+  .num {
+    margin-bottom: 0;
+    width: 32px;
+    flex-shrink: 0;
+  }
+}

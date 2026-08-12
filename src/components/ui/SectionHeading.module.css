@@ -1,0 +1,24 @@
+.heading {
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+.section {
+  font-size: var(--text-section);
+  letter-spacing: var(--ls-section);
+}
+
+.about {
+  font-size: var(--text-about);
+  letter-spacing: var(--ls-section);
+  line-height: var(--lh-snug);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,64 @@
+.hero {
+  position: relative;
+  width: 100%;
+  /* Deliberately shorter than the homepage's 100vh — a chapter opening, not a
+     second front cover. */
+  height: 82vh;
+  min-height: 560px;
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--scrim-hero);
+}
+
+.content {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 64px;
+  max-width: var(--measure-hero);
+}
+
+.meta {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  color: var(--fg-meta);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: var(--text-display-l);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--ls-display);
+  line-height: var(--lh-display);
+  text-transform: uppercase;
+  margin: 0;
+  /*
+   * Project titles are arbitrary content. At 320px the clamp floor holds this
+   * at 42px, where a single long word ("Schwarzkopf") is wider than the 280px
+   * measure and pushes the document sideways. This only engages when a word
+   * genuinely cannot fit, so wider viewports are unaffected.
+   */
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 70vh;
+    min-height: 460px;
+  }
+
+  .content {
+    bottom: 40px;
+  }
+}

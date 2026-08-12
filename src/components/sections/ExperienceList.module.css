@@ -1,0 +1,68 @@
+.eyebrow {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin: 0 0 32px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr auto;
+  gap: 24px;
+  align-items: baseline;
+  padding: 20px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.role {
+  font-size: var(--text-body-l);
+  font-weight: var(--weight-semibold);
+  color: var(--fg);
+}
+
+.tag {
+  font-weight: 400;
+  color: var(--fg-muted);
+}
+
+.context {
+  font-size: var(--text-body-s);
+  color: var(--fg-body);
+}
+
+.years {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  white-space: nowrap;
+}
+
+/*
+ * Education sits under Experience as a subordinate block — the same pattern
+ * Selected Agencies uses under Selected Clients. Existing row styles are reused
+ * so no new visual language is introduced.
+ */
+.education {
+  margin-top: 64px;
+}
+
+@media (max-width: 700px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .years {
+    margin-top: 4px;
+  }
+}

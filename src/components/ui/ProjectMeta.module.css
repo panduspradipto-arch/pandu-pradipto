@@ -1,0 +1,14 @@
+.meta {
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  color: var(--fg-meta);
+}
+
+.md {
+  font-size: var(--text-meta);
+}
+
+.sm {
+  font-size: var(--text-eyebrow);
+}

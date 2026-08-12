@@ -1,0 +1,31 @@
+.section {
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.paper {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.default {
+  padding-top: var(--section-y);
+  padding-bottom: var(--section-y);
+}
+
+.top {
+  padding-top: var(--section-y);
+}
+
+.bottom {
+  padding-bottom: var(--section-y);
+}
+
+.flush {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.narrow {
+  max-width: var(--measure-text);
+}

@@ -1,0 +1,68 @@
+.eyebrow {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin: 0 0 32px;
+}
+
+.index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 48px;
+  max-width: var(--measure-text);
+}
+
+.item {
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  color: var(--fg-muted);
+  padding: 14px 0;
+  border-top: 1px solid var(--rule);
+  transition: color var(--duration-base) var(--ease);
+}
+
+.item:hover {
+  color: var(--fg);
+}
+
+/* Subordinate by construction: separated, smaller, quieter. */
+.agencies {
+  margin-top: 96px;
+}
+
+.agencyList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.agencyItem {
+  font-size: var(--text-body-s);
+  font-weight: var(--weight-medium);
+  color: var(--fg-muted);
+}
+
+@media (max-width: 900px) {
+  .index {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .index {
+    grid-template-columns: 1fr;
+  }
+
+  .agencies {
+    margin-top: 64px;
+  }
+}

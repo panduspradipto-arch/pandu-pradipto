@@ -1,0 +1,38 @@
+.header {
+  padding-bottom: 96px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: var(--text-eyebrow);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: var(--text-section);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--ls-section);
+  text-transform: uppercase;
+  color: var(--fg);
+  margin: 0;
+}
+
+.standfirst {
+  margin-top: 28px;
+  font-size: var(--text-lead);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-lead);
+  color: var(--fg-body);
+  max-width: var(--measure-lead);
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding-bottom: 56px;
+  }
+}

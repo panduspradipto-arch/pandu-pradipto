@@ -1,0 +1,55 @@
+.base {
+  display: inline-block;
+  font-size: var(--text-label);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  transition: background-color var(--duration-base) var(--ease),
+    color var(--duration-base) var(--ease), opacity var(--duration-base) var(--ease),
+    border-color var(--duration-base) var(--ease),
+    transform var(--duration-fast) var(--ease);
+}
+
+/* A 1px press, not a scale — physical feedback without a new visual language. */
+.base:active {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .base,
+  .base:active {
+    transform: none;
+    transition: background-color var(--duration-base) var(--ease),
+      color var(--duration-base) var(--ease);
+  }
+}
+
+.solid {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  padding: 16px 28px;
+}
+
+.solid:hover {
+  background: #ffffff;
+}
+
+.underline {
+  color: var(--fg);
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--rule-hairline);
+}
+
+.underline:hover {
+  border-bottom-color: var(--fg);
+}
+
+.inverse {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: 18px 32px;
+}
+
+.inverse:hover {
+  background: #1c1b19;
+}

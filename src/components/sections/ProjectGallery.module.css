@@ -1,0 +1,166 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--section-y);
+}
+
+/* Gap is the rhythm instrument — it precedes the beat it belongs to. */
+.beat[data-gap="tight"] {
+  margin-top: 2px;
+}
+
+.beat[data-gap="close"] {
+  margin-top: 8px;
+}
+
+.beat[data-gap="normal"] {
+  margin-top: 96px;
+}
+
+.beat[data-gap="pause"] {
+  margin-top: 140px;
+}
+
+.beat:first-child {
+  margin-top: 0;
+}
+
+.contained {
+  padding: 0 var(--gutter);
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.bleed {
+  padding: 0;
+  width: 100%;
+}
+
+.figure {
+  margin: 0;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #141312;
+}
+
+.frame[data-aspect="21:9"] {
+  aspect-ratio: 21 / 9;
+}
+
+.frame[data-aspect="16:9"] {
+  aspect-ratio: 16 / 9;
+}
+
+.frame[data-aspect="3:2"] {
+  aspect-ratio: 3 / 2;
+}
+
+.frame[data-aspect="4:5"] {
+  aspect-ratio: 4 / 5;
+}
+
+.frame[data-aspect="1:1"] {
+  aspect-ratio: 1 / 1;
+}
+
+.frame[data-aspect="9:16"] {
+  aspect-ratio: 9 / 16;
+}
+
+/* ---- Pairs ---- */
+
+.pair {
+  display: grid;
+  gap: 2px;
+}
+
+.pair[data-variant="asymmetric"] {
+  grid-template-columns: 1.4fr 1fr;
+  align-items: start;
+}
+
+.pair[data-variant="even"] {
+  grid-template-columns: 1fr 1fr;
+}
+
+/*
+ * Offset beats hang from one side rather than centring. Centring is what makes
+ * an editorial sequence read as a CMS gallery.
+ */
+.offset {
+  display: flex;
+}
+
+.beat[data-align="left"] .offset {
+  justify-content: flex-start;
+}
+
+.beat[data-align="right"] .offset {
+  justify-content: flex-end;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 620px;
+}
+
+.detail {
+  width: 100%;
+  max-width: 480px;
+}
+
+.caption {
+  margin-top: 16px;
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.bleed .caption {
+  padding: 0 var(--gutter);
+}
+
+@media (max-width: 900px) {
+  .beat[data-gap="normal"] {
+    margin-top: 64px;
+  }
+
+  .beat[data-gap="pause"] {
+    margin-top: 96px;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Pairs stack; the asymmetric pair keeps its size difference. */
+  .pair[data-variant="asymmetric"],
+  .pair[data-variant="even"] {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .pair[data-variant="asymmetric"] > *:last-child {
+    width: 78%;
+  }
+
+  /* Offsets release to full width — the ratio is what matters at this size. */
+  .portrait,
+  .detail {
+    max-width: none;
+  }
+
+  .beat[data-gap="normal"] {
+    margin-top: 48px;
+  }
+
+  .beat[data-gap="pause"] {
+    margin-top: 72px;
+  }
+}

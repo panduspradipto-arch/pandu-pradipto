@@ -1,0 +1,30 @@
+/*
+ * Visible by default. The pending state is only ever applied by the effect,
+ * so no-JS and reduced-motion viewers never see a hidden block.
+ *
+ * Only opacity and transform animate — nothing here triggers layout.
+ */
+.reveal {
+  transition:
+    opacity var(--duration-slow) var(--ease),
+    transform var(--duration-slow) var(--ease);
+}
+
+.reveal[data-reveal="pending"] {
+  opacity: 0;
+  transform: translateY(var(--reveal-distance, 24px));
+}
+
+.reveal[data-reveal="shown"] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal[data-reveal="pending"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
