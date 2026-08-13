@@ -70,16 +70,26 @@ export default async function ProjectPage({ params }: PageProps) {
         ? [{ type: "film", video: project.video, poster: project.media, bleed: true }]
         : [];
 
+  /*
+   * The first beat is promoted above "My Role" as the lead media, so the page
+   * reads image → context → image → contribution → the rest of the work
+   * rather than stacking all the writing together.
+   */
+  const [lead, ...rest] = entries;
+
   return (
     <>
       <ProjectHero project={project} />
       <Reveal>
         <ProjectIntro project={project} />
       </Reveal>
-      <ProjectGallery entries={entries} projectTitle={project.title} />
+      {lead ? (
+        <ProjectGallery entries={[lead]} projectTitle={project.title} label="Lead image" />
+      ) : null}
       <Reveal>
         <ProjectProduction project={project} />
       </Reveal>
+      <ProjectGallery entries={rest} projectTitle={project.title} />
       <Reveal>
         <ProjectResult result={project.result} />
       </Reveal>

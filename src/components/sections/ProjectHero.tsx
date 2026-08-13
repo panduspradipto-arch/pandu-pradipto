@@ -11,9 +11,12 @@ interface ProjectHeroProps {
  * scrim — the same treatment as the homepage work grid, at page scale.
  */
 export function ProjectHero({ project }: ProjectHeroProps) {
-  const meta = [project.client, project.category ?? project.role, project.year]
-    .filter(Boolean)
-    .join(" · ");
+  /*
+   * The credit line states the contribution, not the sector. `category` holds
+   * context like "Beauty & Lifestyle" and is deliberately not shown here — it
+   * would read as though it were the role.
+   */
+  const meta = [project.client, project.role, project.year].filter(Boolean).join(" · ");
 
   return (
     <section className={styles.hero} aria-labelledby="project-heading">

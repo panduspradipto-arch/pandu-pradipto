@@ -22,24 +22,31 @@ export function ProjectProduction({ project }: ProjectProductionProps) {
     ...(project.credits ?? []),
   ];
 
-  if (disciplines.length === 0 && credits.length === 0) return null;
+  if (disciplines.length === 0 && credits.length === 0 && !project.roleSummary) return null;
 
   return (
     <Section narrow labelledBy="production-heading">
       <h2 id="production-heading" className={styles.srOnly}>
-        Production
+        My Role
       </h2>
 
-      {disciplines.length > 0 ? (
+      {disciplines.length > 0 || project.roleSummary ? (
         <div className={styles.block}>
-          <h3 className={styles.label}>Role</h3>
-          <ul className={styles.disciplines}>
-            {disciplines.map((discipline) => (
-              <li key={discipline} className={styles.discipline}>
-                {discipline}
-              </li>
-            ))}
-          </ul>
+          <h3 className={styles.label}>My Role</h3>
+          <div className={styles.roleBody}>
+            {disciplines.length > 0 ? (
+              <ul className={styles.disciplines}>
+                {disciplines.map((discipline) => (
+                  <li key={discipline} className={styles.discipline}>
+                    {discipline}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            {project.roleSummary ? (
+              <p className={styles.roleSummary}>{project.roleSummary}</p>
+            ) : null}
+          </div>
         </div>
       ) : null}
 

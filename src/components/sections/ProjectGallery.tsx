@@ -8,6 +8,11 @@ interface ProjectGalleryProps {
   entries: GalleryEntry[];
   /** Captions placeholder slots and labels video embeds. */
   projectTitle: string;
+  /**
+   * Region label. The detail page renders two galleries — a lead frame and the
+   * main run — so they must not share a name in the accessibility tree.
+   */
+  label?: string;
 }
 
 interface FrameProps {
@@ -39,11 +44,15 @@ function Frame({ item, fallbackCaption, sizes, className }: FrameProps) {
  * rhythm the way a spread does. Aspect ratios are preserved at every breakpoint;
  * portrait work is never re-cropped to landscape for the sake of tidiness.
  */
-export function ProjectGallery({ entries, projectTitle }: ProjectGalleryProps) {
+export function ProjectGallery({
+  entries,
+  projectTitle,
+  label = "Visual story",
+}: ProjectGalleryProps) {
   if (entries.length === 0) return null;
 
   return (
-    <section className={styles.gallery} aria-label="Visual story">
+    <section className={styles.gallery} aria-label={label}>
       {entries.map((entry, index) => {
         const fallback = `${projectTitle} — ${index + 1}`;
         const gap = entry.gap ?? (index === 0 ? "normal" : "normal");

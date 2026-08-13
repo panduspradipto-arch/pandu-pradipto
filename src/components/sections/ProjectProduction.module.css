@@ -26,6 +26,20 @@
   margin: 0;
 }
 
+.roleBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* The contribution, in the owner's own words. */
+.roleSummary {
+  font-size: var(--text-body-l);
+  line-height: var(--lh-body);
+  color: var(--fg-body);
+  max-width: 62ch;
+}
+
 /* A plain wrapped run, not chips and not a bulleted list. */
 .disciplines {
   list-style: none;

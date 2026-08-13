@@ -1,0 +1,225 @@
+/* ---- Controls ---- */
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 48px;
+}
+
+/*
+ * Wraps naturally on desktop. Below 700px it becomes a horizontally scrollable
+ * rail instead — seven controls would otherwise either shrink the type or eat
+ * four lines of vertical space before any work is visible.
+ */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  min-width: 0;
+}
+
+/* Text controls, not pills — the system has no rounded UI. */
+.filter {
+  font-family: inherit;
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition:
+    color var(--duration-base) var(--ease),
+    border-color var(--duration-base) var(--ease);
+}
+
+.filter:hover {
+  color: var(--fg);
+}
+
+/* Filter state is carried by colour plus a rule, never by a filled shape. */
+.filter[aria-pressed="true"] {
+  color: var(--fg);
+  border-bottom-color: var(--fg);
+}
+
+/*
+ * "All" is the default and the way back — it reads at full strength even when
+ * inactive, so the other six stay clearly secondary.
+ */
+.filterAll {
+  color: var(--fg);
+}
+
+.count {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  white-space: nowrap;
+}
+
+/* ---- Grid ---- */
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px 32px;
+}
+
+.item {
+  min-width: 0;
+}
+
+.card {
+  display: block;
+}
+
+.frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #141312;
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+}
+
+.media :global(img) {
+  transition: transform var(--duration-slow) var(--ease);
+}
+
+.card:hover .media :global(img) {
+  transform: scale(1.03);
+}
+
+/* Media-unavailable state: stated plainly, not disguised as a placeholder. */
+.unavailable {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule);
+}
+
+.unavailableLabel {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* ---- Card text ---- */
+
+.meta {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.index {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  color: var(--fg-muted);
+  flex-shrink: 0;
+  padding-top: 3px;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+/* Client leads — this is an index, not a poster. */
+.client {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  transition: color var(--duration-base) var(--ease);
+}
+
+.card:hover .client {
+  color: var(--fg-meta);
+}
+
+.title {
+  font-size: var(--text-project-md);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-snug);
+  color: var(--fg);
+  overflow-wrap: break-word;
+}
+
+.detail {
+  font-size: var(--text-body-s);
+  color: var(--fg-muted);
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .controls {
+    margin-bottom: 32px;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  /* Scrollable rail — type size never shrinks. */
+  .filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 24px;
+    width: 100%;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter {
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+}
+
+@media (hover: none) {
+  .card:hover .media :global(img) {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .media :global(img),
+  .card:hover .media :global(img) {
+    transform: none;
+    transition: none;
+  }
+}

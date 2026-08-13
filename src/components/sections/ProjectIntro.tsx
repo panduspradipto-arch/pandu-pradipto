@@ -16,11 +16,14 @@ interface ProjectIntroProps {
 export function ProjectIntro({ project }: ProjectIntroProps) {
   const statement = project.description ?? project.summary;
 
+  /*
+   * Role is deliberately absent — it has its own "My Role" section below the
+   * lead media, so repeating it here would state the contribution twice.
+   */
   const fields = [
     { label: "Brief", body: project.brief },
     { label: "Challenge", body: project.challenge },
     { label: "Approach", body: project.approach },
-    { label: "Role", body: project.role },
   ].filter((f): f is { label: string; body: string } => Boolean(f.body));
 
   if (!statement && fields.length === 0) return null;

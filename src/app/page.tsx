@@ -31,7 +31,7 @@ export default function HomePage() {
           id="work"
           title="Selected Work"
           projects={featuredProjects}
-          action={{ label: "See full project catalog →", href: "#work" }}
+          action={{ label: "View all work →", href: "/work" }}
         />
       </Reveal>
 

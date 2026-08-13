@@ -1,6 +1,19 @@
 import type { Discipline, Project } from "@/types/content";
 
 /**
+ * DATA RULES — the agreed baseline. Keep records consistent with these.
+ *
+ * 1. `role` is the contribution on THIS project. CV employment titles are
+ *    separate and live in `experience.ts` — never copy one into a project.
+ *    "Multimedia Specialist" in particular is a GovTech job title.
+ * 2. Archive cards render `Year · Discipline`; the detail hero renders
+ *    `Client · Role · Year`. The index categorises, the page attributes.
+ * 3. `production` lists only what the owner personally did. Work done by a
+ *    coordinated team belongs in `brief`, not here.
+ * 4. `brief` and `roleSummary` are the owner's words. Never write them from
+ *    filenames, client relationships, or artwork — leave them unset instead.
+ * 5. No `result` without a verified outcome. Never infer metrics or awards.
+ *
  * The project catalog.
  *
  * Order matters: the first six `featured` entries fill the homepage editorial
@@ -165,6 +178,7 @@ export const projects: Project[] = [
   {
     slug: "schwarzkopf-hvar-hair",
     title: "Schwarzkopf Pro x H'var Hair",
+    displayTitle: "H'var Hair",
     client: "Schwarzkopf Professional",
     role: "Beauty & Lifestyle",
     discipline: "graphic-design",
@@ -174,29 +188,138 @@ export const projects: Project[] = [
   {
     slug: "tripollar-indonesia",
     title: "TriPollar Indonesia",
+    displayTitle: "Indonesia",
     client: "TriPollar",
-    role: "Beauty & Lifestyle",
-    discipline: "graphic-design",
+    /* Owner-confirmed contribution. Deliberately NOT "Art Direction" — the
+       work was produced and coordinated, not personally art-directed. */
+    role: "Creative Production",
+    /* Sector context, not a role. */
+    category: "Beauty & Lifestyle",
+    /* Owner-corrected: a social media management engagement, not design work. */
+    discipline: "social-media",
     year: "2021",
-    summary: "Product visual and campaign design for TriPollar skincare devices.",
+    summary: "Ongoing social media management for TriPollar skincare devices.",
+    /*
+     * Project scope. Says "content development" rather than "content design" —
+     * the creative team handled design and day-to-day execution, so the brief
+     * must not imply the owner personally designed the content.
+     */
+    brief:
+      "Social media management for TriPollar skincare devices — an ongoing program covering creative strategy, content planning, content development, posting management, and monthly reporting.",
+    /*
+     * Personal contribution only. Deliberately excludes Content Designer and
+     * Graphic Designer — that work belonged to the coordinated team.
+     */
+    production: ["Creative Producer", "Project Management"],
+    roleSummary:
+      "Built and coordinated the creative team, led brainstorming sessions, developed and finalized proposals and presentations, and managed the ongoing monthly content planning, posting, and reporting.",
+    heroMedia: {
+      src: "/media/tripollar-indonesia/kv-july-01.jpg",
+      alt: "TriPollar Stop VX Gold device lit against a dark textured backdrop",
+    },
+    gallery: [
+      /* Lead media — the flagship campaign key visual. */
+      {
+        type: "frame",
+        aspect: "1:1",
+        media: {
+          src: "/media/tripollar-indonesia/kv-june-01.jpg",
+          alt: "Stop VX Gold 2 campaign key visual with product and model",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        gap: "pause",
+        items: [
+          {
+            aspect: "1:1",
+            media: {
+              src: "/media/tripollar-indonesia/kv-june-04.jpg",
+              alt: "Two models against a dark background",
+            },
+          },
+          {
+            aspect: "1:1",
+            media: {
+              src: "/media/tripollar-indonesia/kv-june-06.jpg",
+              alt: "Gold device resting on patterned black silk",
+            },
+          },
+        ],
+      },
+      {
+        type: "portrait",
+        align: "right",
+        aspect: "9:16",
+        gap: "normal",
+        media: {
+          src: "/media/tripollar-indonesia/highlight-collagen-6-4.jpg",
+          alt: "Collagen highlight cover",
+        },
+      },
+      {
+        type: "frame",
+        aspect: "1:1",
+        gap: "pause",
+        media: {
+          src: "/media/tripollar-indonesia/kv-june-03.jpg",
+          alt: "Model with on-image skin concern annotations",
+        },
+      },
+      {
+        type: "portrait",
+        align: "left",
+        aspect: "9:16",
+        gap: "normal",
+        media: {
+          src: "/media/tripollar-indonesia/highlight-product-6-6.jpg",
+          alt: "Product highlight cover",
+        },
+      },
+      {
+        type: "frame",
+        aspect: "1:1",
+        gap: "pause",
+        media: {
+          src: "/media/tripollar-indonesia/kv-july-02.jpg",
+          alt: "Black and white portrait of three models outdoors",
+        },
+      },
+    ],
   },
   {
     slug: "ula-sedekah-ramadan",
     title: 'Ula "Sedekah" Ramadan Campaign',
     client: "Ula",
-    role: "Multimedia Specialist",
-    discipline: "multimedia",
-    year: "2023",
+    /* Was "Multimedia Specialist" — a GovTech employment title, not a project
+       role. Corrected per the owner's CV. */
+    role: "Senior Art Director",
+    discipline: "art-direction",
+    year: "2022–2023",
     summary: "Ramadan CSR campaign content for Ula's retail network.",
+    /* No brief or roleSummary: the owner has not supplied their contribution
+       for this project, and none may be inferred. */
   },
   {
     slug: "mila-dopiz",
-    title: "Mila D'Opiz",
+    title: "Social Media Content Production",
+    /* "Mila" (single L) is the confirmed spelling. Source filenames write
+       "Milla D_Opiz" — that is the archive's spelling, not the client's. */
     client: "Mila D'Opiz",
-    role: "Multimedia Specialist",
-    discipline: "multimedia",
-    year: "2023–24",
-    summary: "Beauty brand content and campaign support.",
+    /* Replaces "Multimedia Specialist", which was a GovTech job title rather
+       than a project role. Mirrors TriPollar's pattern. */
+    role: "Creative Production",
+    discipline: "social-media",
+    year: "2023–2024",
+    summary: "Social media content production, from video concept through execution.",
+    brief:
+      "Social media content production for Mila D'Opiz, developing video concepts and producing social-first content from ideation through execution.",
+    /* Personal contribution. Connects creative development, production, and
+       directing — not visual execution. */
+    production: ["Creative Producer", "Director"],
+    roleSummary:
+      "Developed video concepts, led brainstorming and proposal development, built and coordinated the production team, managed the production process, and directed the shoot through final execution.",
   },
   {
     slug: "mlbb-valentines",

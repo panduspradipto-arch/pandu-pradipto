@@ -91,7 +91,19 @@ export interface ProjectResult {
 export interface Project {
   /** URL-safe id. Also the route segment for /work/[slug]. */
   slug: string;
+  /**
+   * Canonical title. Used for page titles, metadata, and accessible names —
+   * always the full, unambiguous form.
+   */
   title: string;
+  /**
+   * Archive-card title only. Set this where `title` repeats the client name,
+   * which reads redundantly when the client is printed directly above it:
+   * client "TriPollar" + title "TriPollar Indonesia" → displayTitle "Indonesia".
+   *
+   * Falls back to `title` when unset. Never used for metadata or aria labels.
+   */
+  displayTitle?: string;
   client: string;
   /** Display label for the discipline, e.g. "Art Direction". */
   role: string;
@@ -138,6 +150,12 @@ export interface Project {
    * feel the page is meant to avoid.
    */
   production?: string[];
+
+  /**
+   * Prose describing the contribution, shown under the production disciplines.
+   * The owner's own words — never inferred from artwork or client relationship.
+   */
+  roleSummary?: string;
 
   credits?: Credit[];
   result?: ProjectResult;

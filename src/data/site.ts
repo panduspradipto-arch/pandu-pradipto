@@ -12,11 +12,12 @@ export const site = {
 } as const;
 
 /**
- * Services, About and Contact now resolve to real pages rather than homepage
- * anchors. Work keeps its anchor until the /work catalog page is built.
+ * All four nav destinations are real pages. Work points at the archive at
+ * /work, not the homepage section — the homepage's Selected Work block is a
+ * curated excerpt, and /work is the full body of work.
  */
 export const navLinks: NavLink[] = [
-  { label: "Work", href: "/#work" },
+  { label: "Work", href: "/work" },
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
 ];
