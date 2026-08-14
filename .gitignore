@@ -8,3 +8,8 @@ build/
 next-env.d.ts
 tsconfig.tsbuildinfo
 .vercel
+
+# Internal working document. Its "Never publish" table names confidential
+# client and pitch material by name, which is internal information even though
+# the material itself is not in the file. Kept on disk, out of the public repo.
+docs/PORTFOLIO_CONTENT_MAP.md
