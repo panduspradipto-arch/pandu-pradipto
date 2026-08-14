@@ -246,6 +246,137 @@ export const projects: Project[] = [
       height: 1080,
     },
     summary: "Collaboration campaign for Schwarzkopf Professional Indonesia.",
+    /*
+     * Social feed artwork, all delivered 1:1. Beats alternate type so no two
+     * neighbours share a shape, per the gallery rules in `types/content.ts`.
+     */
+    gallery: [
+      {
+        type: "frame",
+        aspect: "1:1",
+        media: {
+          src: "/media/schwarzkopf-hvar-hair/igora-royal.jpg",
+          alt: "IGORA ROYAL wordmark on a red ground",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        gap: "pause",
+        items: [
+          {
+            aspect: "1:1",
+            media: {
+              src: "/media/schwarzkopf-hvar-hair/igora-be-proud-a.jpg",
+              alt: 'IGORA ROYAL — "Be Proud, Be Subtle, Be Natural, Be Genuine"',
+            },
+          },
+          {
+            aspect: "1:1",
+            media: {
+              src: "/media/schwarzkopf-hvar-hair/igora-be-proud-b.jpg",
+              alt: "IGORA ROYAL Absolutes carton on a warm grey ground",
+            },
+          },
+        ],
+      },
+      {
+        type: "detail",
+        align: "left",
+        aspect: "1:1",
+        media: {
+          src: "/media/schwarzkopf-hvar-hair/blondme.jpg",
+          alt: "BLONDME lettering set in large type on a pale ground",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "1:1",
+            media: {
+              src: "/media/schwarzkopf-hvar-hair/igora-be-focused-a.jpg",
+              alt: 'IGORA ROYAL — "Be Focused, Be Fearless, Be Cool, Be Calm"',
+            },
+          },
+          {
+            aspect: "1:1",
+            media: {
+              src: "/media/schwarzkopf-hvar-hair/igora-be-focused-b.jpg",
+              alt: "IGORA ROYAL Fashion Lights carton on a lilac ground",
+            },
+          },
+        ],
+      },
+      {
+        type: "frame",
+        gap: "pause",
+        aspect: "1:1",
+        media: {
+          src: "/media/schwarzkopf-hvar-hair/before-after.jpg",
+          alt: "Before and after colour comparison, dark hair to blonde",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "1:1",
+            media: {
+              src: "/media/schwarzkopf-hvar-hair/igora-be-real-a.jpg",
+              alt: 'IGORA ROYAL — "Be Real, Be Bold, Be Gold, Be Luminous"',
+            },
+          },
+          {
+            aspect: "1:1",
+            media: {
+              src: "/media/schwarzkopf-hvar-hair/igora-be-real-b.jpg",
+              alt: "IGORA ROYAL Highlifts carton on a teal ground",
+            },
+          },
+        ],
+      },
+      {
+        type: "detail",
+        align: "right",
+        aspect: "1:1",
+        media: {
+          src: "/media/schwarzkopf-hvar-hair/masterclass-invitation.jpg",
+          alt: "Master Class invitation card with Madame Cindy as speaker",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "1:1",
+            media: {
+              src: "/media/schwarzkopf-hvar-hair/igora-be-original-a.jpg",
+              alt: 'IGORA ROYAL — "Be Original, Be Minimal, Be Brunette, Be Pure"',
+            },
+          },
+          {
+            aspect: "1:1",
+            media: {
+              src: "/media/schwarzkopf-hvar-hair/igora-be-original-b.jpg",
+              alt: "IGORA ROYAL carton standing on a red ground",
+            },
+          },
+        ],
+      },
+      {
+        type: "frame",
+        gap: "pause",
+        aspect: "1:1",
+        media: {
+          src: "/media/schwarzkopf-hvar-hair/igora-shade-range.jpg",
+          alt: "IGORA ROYAL shade range laid out across the frame",
+        },
+      },
+    ],
   },
   {
     slug: "tripollar-indonesia",
