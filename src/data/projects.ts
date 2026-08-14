@@ -313,6 +313,68 @@ export const projects: Project[] = [
     },
     summary: "Two-year TVC evolution from trade-focused to human storytelling.",
     featured: true,
+    /*
+     * The record spans both Rucika years, so the run holds both: the 2019
+     * Total Solution system work and the 2020 TVC that followed it.
+     */
+    gallery: [
+      {
+        type: "frame",
+        aspect: "3:2",
+        media: {
+          src: "/media/rucika-total-solution/rucika-tvc-2020-frames.jpg",
+          alt: "Sequence of frames from the Rucika TVC, laid out across a board",
+        },
+      },
+      {
+        type: "portrait",
+        align: "left",
+        aspect: "4:5",
+        gap: "pause",
+        media: {
+          src: "/media/rucika-total-solution/rucika-solusi-total.jpg",
+          alt: 'Rucika key visual — "Dari Sebuah Totalitas Hadir Produk Berkualitas"',
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "9:16",
+            media: {
+              src: "/media/rucika-total-solution/rucika-system-boards.jpg",
+              alt: "Stacked product banners for the piping range",
+            },
+          },
+          {
+            aspect: "9:16",
+            media: {
+              src: "/media/rucika-total-solution/rucika-pipe-system-icons.jpg",
+              alt: "Eight numbered icons making up the total piping system",
+            },
+          },
+        ],
+      },
+      {
+        type: "detail",
+        align: "right",
+        aspect: "3:2",
+        media: {
+          src: "/media/rucika-total-solution/rucika-hygienic-water-system.jpg",
+          alt: "Rucika Hygienic Water System mark, powered by Maezawa",
+        },
+      },
+      {
+        type: "frame",
+        gap: "pause",
+        aspect: "3:2",
+        media: {
+          src: "/media/rucika-total-solution/rucika-tvc-still.jpg",
+          alt: "Still from the TVC — a woman washing up at a kitchen sink",
+        },
+      },
+    ],
   },
 
   /* ---- Full catalog ---- */
