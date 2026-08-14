@@ -816,6 +816,124 @@ export const projects: Project[] = [
     discipline: "art-direction",
     year: "2022–2023",
     summary: "Ramadan CSR campaign content for Ula's retail network.",
+    media: {
+      src: "/media/ula-sedekah-ramadan/ula-team-rooftop.jpg",
+      alt: "Ula team on a rooftop with the Jakarta skyline behind them",
+      width: 2000,
+      height: 1125,
+    },
+    /*
+     * Team photography, shot by the owner. The set runs to 32 finished frames
+     * built from a handful of repeated setups, so this is an edit rather than
+     * the full take — one frame per subject, and a spread of studio and
+     * location work. The rest stay in the archive.
+     */
+    gallery: [
+      {
+        type: "bleed",
+        aspect: "16:9",
+        media: {
+          src: "/media/ula-sedekah-ramadan/ula-team-skyline.jpg",
+          alt: "Four of the team talking on a rooftop, towers rising behind them",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        gap: "pause",
+        items: [
+          {
+            aspect: "3:2",
+            media: {
+              src: "/media/ula-sedekah-ramadan/ula-team-products.jpg",
+              alt: "The team in studio among stacked cartons and packaged goods",
+            },
+          },
+          {
+            aspect: "3:2",
+            media: {
+              src: "/media/ula-sedekah-ramadan/ula-team-inventory.jpg",
+              alt: "The team holding products in front of a wall of stock",
+            },
+          },
+        ],
+      },
+      {
+        type: "frame",
+        aspect: "3:2",
+        media: {
+          src: "/media/ula-sedekah-ramadan/ula-team-studio.jpg",
+          alt: "The team shoulder to shoulder against a white studio backdrop",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "9:16",
+            media: {
+              src: "/media/ula-sedekah-ramadan/ula-portrait-01.jpg",
+              alt: "Studio portrait, arms raised",
+            },
+          },
+          {
+            aspect: "9:16",
+            media: {
+              src: "/media/ula-sedekah-ramadan/ula-portrait-02.jpg",
+              alt: "Studio portrait, seated on a stool",
+            },
+          },
+        ],
+      },
+      {
+        type: "portrait",
+        align: "left",
+        aspect: "9:16",
+        gap: "pause",
+        media: {
+          src: "/media/ula-sedekah-ramadan/ula-team-rooftop-portrait.jpg",
+          alt: "The team crouched together on the rooftop deck",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "9:16",
+            media: {
+              src: "/media/ula-sedekah-ramadan/ula-portrait-03.jpg",
+              alt: "Location portrait against the glass of an office tower",
+            },
+          },
+          {
+            aspect: "9:16",
+            media: {
+              src: "/media/ula-sedekah-ramadan/ula-portrait-04.jpg",
+              alt: "Studio portrait, standing",
+            },
+          },
+        ],
+      },
+      {
+        type: "frame",
+        aspect: "16:9",
+        media: {
+          src: "/media/ula-sedekah-ramadan/ula-team-studio-wide.jpg",
+          alt: "The team laughing together in the studio",
+        },
+      },
+      {
+        type: "portrait",
+        align: "right",
+        aspect: "9:16",
+        media: {
+          src: "/media/ula-sedekah-ramadan/ula-team-rooftop-tall.jpg",
+          alt: "The team standing on the rooftop, towers filling the frame above",
+        },
+      },
+    ],
     /* No brief or roleSummary: the owner has not supplied their contribution
        for this project, and none may be inferred. */
   },
