@@ -334,10 +334,86 @@ export const projects: Project[] = [
     slug: "anika-worry-monster",
     title: '"Anika & the Worry Monster"',
     client: "Pibo",
-    role: "Publishing",
+    /* Credit printed on the published cover: "Illustrator: Pandu Pradipto".
+       Verified from the artwork itself, not inferred. */
+    role: "Illustrator",
     discipline: "publishing",
     year: "2026",
     summary: "Children's book illustration and design, published by Pibo.",
+    heroMedia: {
+      src: "/media/anika-worry-monster/cover.jpg",
+      alt: "Cover of Anika & the Worry Monster",
+    },
+    /* Cover and back cover only — interior pages are not published. */
+    gallery: [
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "4:5",
+            media: {
+              src: "/media/anika-worry-monster/cover.jpg",
+              alt: "Front cover",
+            },
+          },
+          {
+            aspect: "4:5",
+            media: {
+              src: "/media/anika-worry-monster/back-cover.jpg",
+              alt: "Back cover",
+            },
+          },
+        ],
+      },
+    ],
+    credits: [{ role: "Author", name: "Inaara Keswani" }],
+  },
+
+  /*
+   * GovTech Procurement.
+   *
+   * Employment at GovTech is recorded separately in experience.ts as
+   * "Multimedia Specialist" — that title is NOT reused here. The roles below
+   * are the owner's stated contribution, and they differ per asset:
+   *   · Google Summit documentation → Videographer
+   *   · Tutorial Penggunaan         → Art Director and Animator
+   */
+  {
+    slug: "govtech-procurement",
+    title: "GovTech Procurement",
+    client: "GovTech Procurement",
+    role: "Creative Art Director & Content Production",
+    /* Discipline id, not the employment title. See DATA RULES above. */
+    discipline: "multimedia",
+    year: "2023–2024",
+    summary: "Content production, motion graphics, and video for GovTech Procurement.",
+    production: ["Art Director", "Animator", "Videographer"],
+    /* Owner's words, verbatim. Covers Art Direction, animation, and videography
+       explicitly — no separate `brief`, so nothing is invented around it. */
+    roleSummary:
+      "Led the creative direction and content production for GovTech Procurement, developing digital video content and motion assets from concept through production. Responsible for Creative Art Direction, animation, and videography, ensuring the content maintained a clear visual identity and translated the GovTech message effectively across digital formats.",
+    /* Three externally hosted films. No MP4 is bundled into the repo. */
+    gallery: [
+      {
+        type: "film",
+        bleed: true,
+        video: { provider: "youtube", id: "zVivSwkTtaY" },
+        caption: "Content Reels Production",
+      },
+      {
+        type: "film",
+        gap: "pause",
+        video: { provider: "youtube", id: "ByVB-W2cpPE" },
+        caption: "Motion Graphic Logo Bumper",
+      },
+      {
+        type: "film",
+        gap: "pause",
+        video: { provider: "youtube", id: "MGxsfQEYh9Y" },
+        caption: "Creative Art Director — Digital Video Commercial",
+      },
+    ],
   },
 ];
 
