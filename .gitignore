@@ -13,3 +13,12 @@ tsconfig.tsbuildinfo
 # client and pitch material by name, which is internal information even though
 # the material itself is not in the file. Kept on disk, out of the public repo.
 docs/PORTFOLIO_CONTENT_MAP.md
+
+# Local backups and internal notes. These were moved into the project folder by
+# hand; the archive inside contains the superseded app including JOAYO and
+# stillomatic artwork, and the backlog names confidential classifications.
+# Neither may reach the public repo.
+_backup_*/
+_superseded_*/
+*_BACKLOG.md
+*.tar.gz

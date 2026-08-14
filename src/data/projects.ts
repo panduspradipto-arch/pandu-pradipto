@@ -81,6 +81,107 @@ export const projects: Project[] = [
     year: "2023",
     summary: "Two brand identities built from zero, content and campaign management.",
     featured: true,
+    media: {
+      src: "/media/hotlicks-clean-green-jakarta/hotlicks-guess-whats-inside.jpg",
+      alt: 'Hotlicks burger close-up with the line "Can you guess what\'s inside?"',
+      width: 1080,
+      height: 1080,
+    },
+    /*
+     * Hotlicks half only. This record covers two brands and the Clean & Green
+     * artwork is not migrated yet, so filenames stay brand-prefixed to keep the
+     * two sets separable when the rest lands.
+     */
+    gallery: [
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "4:5",
+            media: {
+              src: "/media/hotlicks-clean-green-jakarta/hotlicks-barbacoa-ribeye.jpg",
+              alt: "Barbacoa ribeye steak on a board with fries",
+            },
+          },
+          {
+            aspect: "4:5",
+            media: {
+              src: "/media/hotlicks-clean-green-jakarta/hotlicks-bar-bbq-smokehouse.jpg",
+              alt: "Smoked steak on a wooden board under a Bar BBQ Smokehouse banner",
+            },
+          },
+        ],
+      },
+      {
+        type: "detail",
+        align: "left",
+        aspect: "1:1",
+        gap: "pause",
+        media: {
+          src: "/media/hotlicks-clean-green-jakarta/hotlicks-whole-hog-feast.jpg",
+          alt: 'Hotlicks pig mark above the words "The Whole Hog Family Feast"',
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "4:5",
+            media: {
+              src: "/media/hotlicks-clean-green-jakarta/hotlicks-pit-crew.jpg",
+              alt: 'Pit crew member tending a wood fire, "Smoking Seriously Slow" on his shirt',
+            },
+          },
+          {
+            aspect: "4:5",
+            media: {
+              src: "/media/hotlicks-clean-green-jakarta/hotlicks-pit-master-carving.jpg",
+              alt: "Pit master carving smoked meat on a board",
+            },
+          },
+        ],
+      },
+      {
+        type: "frame",
+        gap: "pause",
+        aspect: "1:1",
+        media: {
+          src: "/media/hotlicks-clean-green-jakarta/hotlicks-wood-fire.jpg",
+          alt: "Wood burning in the open smoker",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "4:5",
+            media: {
+              src: "/media/hotlicks-clean-green-jakarta/hotlicks-pit-master.jpg",
+              alt: "Pit master eating a burger in a Hotlicks shirt",
+            },
+          },
+          {
+            aspect: "4:5",
+            media: {
+              src: "/media/hotlicks-clean-green-jakarta/hotlicks-bar-bbq-ribs.jpg",
+              alt: "Two guests raising drinks over a rack of ribs",
+            },
+          },
+        ],
+      },
+      {
+        type: "detail",
+        align: "right",
+        aspect: "1:1",
+        media: {
+          src: "/media/hotlicks-clean-green-jakarta/hotlicks-live-cooking-show.jpg",
+          alt: "Live cooking show announcement card featuring the pit master",
+        },
+      },
+    ],
   },
   {
     slug: "mlbb-ramadan",
