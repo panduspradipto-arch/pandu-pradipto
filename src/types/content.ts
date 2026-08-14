@@ -105,13 +105,26 @@ export interface Project {
    */
   displayTitle?: string;
   client: string;
-  /** Display label for the discipline, e.g. "Art Direction". */
-  role: string;
+  /**
+   * The verified contribution on THIS project, e.g. "Senior Art Director".
+   *
+   * Optional, and deliberately so: a deliverable ("Key Visual"), a discipline
+   * ("Graphic Design"), a sector ("Beauty & Lifestyle"), a technique
+   * ("AI-Enhanced"), or an employment mode ("Freelance Creative") is not a
+   * contribution, and publishing one in the credit line asserts a job title
+   * that was never confirmed. Where the contribution is unknown, leave this
+   * unset — the credit line then reads `Client · Year` — rather than filling
+   * it with the nearest available label. `discipline` already categorises.
+   */
+  role?: string;
   discipline: Discipline;
-  /** Free text so ranges ("2019–20") work as well as single years. */
+  /** Free text so ranges ("2019–20") work as well as single years. En dash. */
   year: string;
-  /** One line. Shown on the catalog card. */
-  summary: string;
+  /**
+   * One line, shown on the catalog card. Optional for the same reason as
+   * `role`: an unwritten summary is preferable to an inferred one.
+   */
+  summary?: string;
   /** Agency or production house credited, when there is one. */
   studio?: string;
   /** Cover still, used on the homepage grid. Omit for a placeholder slot. */

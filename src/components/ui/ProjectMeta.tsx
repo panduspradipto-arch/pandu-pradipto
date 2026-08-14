@@ -22,7 +22,9 @@ export function ProjectMeta({
   includeStudio = false,
   className,
 }: ProjectMetaProps) {
-  const parts = [project.client, project.role];
+  /* `role` is absent where the contribution was never verified; the line then
+     reads `Client · Year` rather than carrying an inferred job title. */
+  const parts = [project.client, project.role].filter(Boolean);
   if (includeStudio && project.studio) parts.push(project.studio);
   parts.push(project.year);
 

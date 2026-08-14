@@ -22,7 +22,7 @@ export default function HomePage() {
       <Hero
         headline={["Ideas,", "Produced."]}
         lead={site.tagline}
-        primaryCta={{ label: "View Selected Work", href: "#work" }}
+        primaryCta={{ label: "View Selected Work", href: "/work" }}
         secondaryCta={{ label: "Let's Work Together", href: "#contact" }}
       />
 

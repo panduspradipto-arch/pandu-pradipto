@@ -86,13 +86,15 @@ export function ProjectArchive({ projects, disciplines }: ProjectArchiveProps) {
             <Link
               href={`/work/${project.slug}`}
               className={styles.card}
-              aria-label={`${project.title} — ${project.client}, ${project.role}, ${project.year}`}
+              aria-label={[project.title, "—", [project.client, project.role, project.year]
+                .filter(Boolean)
+                .join(", ")].join(" ")}
             >
               <span className={styles.frame}>
                 {hasArtwork(project.slug) ? (
                   <MediaSlot
                     media={project.media}
-                    placeholder={project.summary}
+                    placeholder={project.summary ?? project.title}
                     sizes="(max-width: 700px) 100vw, 50vw"
                     className={styles.media}
                   />

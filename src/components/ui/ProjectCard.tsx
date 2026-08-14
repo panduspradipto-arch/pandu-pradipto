@@ -29,6 +29,10 @@ export function ProjectCard({
   priority = false,
   sizes = "100vw",
 }: ProjectCardProps) {
+  /* Role drops out of the label when the contribution is unverified, rather
+     than announcing "undefined" between the client and the year. */
+  const label = [project.client, project.role, project.year].filter(Boolean).join(", ");
+
   return (
     <article className={[styles.card, styles[size]].join(" ")}>
       {/* An explicit label, so the link announces the project rather than the
@@ -36,11 +40,11 @@ export function ProjectCard({
       <Link
         href={`/work/${project.slug}`}
         className={styles.link}
-        aria-label={`${project.title} — ${project.client}, ${project.role}, ${project.year}`}
+        aria-label={`${project.title} — ${label}`}
       >
         <MediaSlot
           media={project.media}
-          placeholder={project.summary}
+          placeholder={project.summary ?? project.title}
           priority={priority}
           sizes={sizes}
           className={styles.media}

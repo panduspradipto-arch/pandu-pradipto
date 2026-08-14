@@ -6,8 +6,15 @@ import type { Discipline, Project } from "@/types/content";
  * 1. `role` is the contribution on THIS project. CV employment titles are
  *    separate and live in `experience.ts` — never copy one into a project.
  *    "Multimedia Specialist" in particular is a GovTech job title.
+ * 1a. `role` is OPTIONAL, and unset is the correct value whenever the
+ *    contribution has not been confirmed. A deliverable ("Key Visual"), a
+ *    discipline ("Graphic Design"), a sector ("Beauty & Lifestyle"), a
+ *    technique ("AI-Enhanced") or an employment mode ("Freelance Creative")
+ *    is not a contribution — nine records were cleared of exactly these in
+ *    Step 18. Never refill one from `discipline` or `category`.
  * 2. Archive cards render `Year · Discipline`; the detail hero renders
- *    `Client · Role · Year`. The index categorises, the page attributes.
+ *    `Client · Role · Year`, collapsing to `Client · Year` when `role` is
+ *    unset. The index categorises, the page attributes.
  * 3. `production` lists only what the owner personally did. Work done by a
  *    coordinated team belongs in `brief`, not here.
  * 4. `brief` and `roleSummary` are the owner's words. Never write them from
@@ -40,7 +47,6 @@ export const projects: Project[] = [
     slug: "cimory-tayo-dance",
     title: '"Dance" — Campaign Film',
     client: "Cimory",
-    role: "Freelance Creative",
     discipline: "freelance-creative",
     year: "2024",
     summary: "Pitch-winning 15s spot with cross-border 3D animation.",
@@ -50,7 +56,6 @@ export const projects: Project[] = [
     slug: "woods-kalbe-farma",
     title: "Kalbe Farma",
     client: "Woods'",
-    role: "Key Visual",
     discipline: "graphic-design",
     year: "2019",
     summary: "Key visual campaign for cough-relief lozenges, talent-led and playful.",
@@ -60,7 +65,6 @@ export const projects: Project[] = [
     slug: "hotlicks-clean-green-jakarta",
     title: "Two Brand Launches",
     client: "Hotlicks & CGJ",
-    role: "Social Media",
     discipline: "social-media",
     year: "2023",
     summary: "Two brand identities built from zero, content and campaign management.",
@@ -70,7 +74,6 @@ export const projects: Project[] = [
     slug: "mlbb-ramadan",
     title: "Ramadan Campaign",
     client: "MLBB",
-    role: "AI-Enhanced",
     discipline: "social-media",
     year: "2023",
     summary: "AI-assisted video production with A/B creative testing.",
@@ -80,9 +83,8 @@ export const projects: Project[] = [
     slug: "rucika-total-solution",
     title: "Total Solution",
     client: "Rucika",
-    role: "Graphic Design",
     discipline: "graphic-design",
-    year: "2019-20",
+    year: "2019–20",
     summary: "Two-year TVC evolution from trade-focused to human storytelling.",
     featured: true,
   },
@@ -121,7 +123,6 @@ export const projects: Project[] = [
     slug: "djabesmen-ngga-bikin-tekor",
     title: 'Djabesmen — "Ngga Bikin Tekor"',
     client: "Djabesmen",
-    role: "Graphic Design",
     discipline: "graphic-design",
     year: "2019",
     summary: "Print campaign for asbestos roofing brand under Rucika Group.",
@@ -147,13 +148,21 @@ export const projects: Project[] = [
     summary: "Award-submission edit and motion graphics for KitKat Valentine's campaign.",
   },
   {
+    /*
+     * Confirmed 2024, a digital video commercial delivered 9:16. The earlier
+     * "2019 · seasonal print campaign" summary contradicted that and has been
+     * removed rather than rewritten — the owner has not supplied replacement
+     * copy, and inferring one from the format would be inventing it.
+     *
+     * The 9:16 belongs on a `gallery` beat's `aspect`, but no ABC artwork is in
+     * the repo yet, so there is no frame to carry it. Apply it when the assets
+     * land; do not derive an aspect from storage dimensions (see Mila/realme).
+     */
     slug: "abc-sirup-ramadan",
     title: "ABC Sirup Ramadan",
     client: "ABC",
-    role: "Graphic Design",
     discipline: "graphic-design",
-    year: "2019",
-    summary: "Seasonal print campaign for ABC syrup's Ramadan lineup.",
+    year: "2024",
   },
   {
     slug: "realme-14-series",
@@ -180,7 +189,6 @@ export const projects: Project[] = [
     title: "Schwarzkopf Pro x H'var Hair",
     displayTitle: "H'var Hair",
     client: "Schwarzkopf Professional",
-    role: "Beauty & Lifestyle",
     discipline: "graphic-design",
     year: "2022",
     summary: "Collaboration campaign for Schwarzkopf Professional Indonesia.",
@@ -325,7 +333,6 @@ export const projects: Project[] = [
     slug: "mlbb-valentines",
     title: "MLBB Valentine's Day Campaign",
     client: "MLBB",
-    role: "Gaming & Entertainment",
     discipline: "social-media",
     year: "2023",
     summary: "Seasonal content campaign for Mobile Legends: Bang Bang.",
