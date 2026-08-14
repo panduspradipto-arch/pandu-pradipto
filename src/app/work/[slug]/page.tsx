@@ -13,6 +13,7 @@ import { NextProject } from "@/components/sections/NextProject";
 import { ProjectCTA } from "@/components/sections/ProjectCTA";
 
 import { getNextProject, getProject, projects } from "@/data/projects";
+import { site } from "@/data/site";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -31,15 +32,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const description = project.description ?? project.summary;
 
+  /* Relative — `metadataBase` in the root layout makes it absolute. The still
+     lives under /public/media, so no host is knowable at this level. */
+  const path = `/work/${slug}`;
+
   return {
     title: `${project.title} — ${project.client}`,
     description,
     openGraph: {
       title: `${project.title} — ${project.client}`,
       description,
+      url: path,
+      siteName: site.name,
       type: "article",
       images: project.heroMedia?.src ?? project.media?.src,
     },
+    alternates: { canonical: path },
   };
 }
 

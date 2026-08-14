@@ -17,7 +17,14 @@ export const metadata: Metadata = {
   description,
   /* Without this the root layout's openGraph is inherited, so sharing this
      page would surface the homepage's title and description. */
-  openGraph: { title: `Services — ${site.name}`, description, type: "website" },
+  openGraph: {
+    title: `Services — ${site.name}`,
+    description,
+    url: "/services",
+    siteName: site.name,
+    type: "website",
+  },
+  alternates: { canonical: "/services" },
 };
 
 /**

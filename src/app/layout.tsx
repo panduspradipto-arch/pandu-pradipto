@@ -19,17 +19,39 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
+  /**
+   * Resolves every relative metadata URL in the app — canonicals, `og:url`,
+   * and the per-project `og:image` paths under /media — against the production
+   * origin. Without it Next falls back to http://localhost:3000 and warns at
+   * build time, which is exactly what shipped before.
+   */
+  metadataBase: new URL(site.url),
   title: {
     default: `${site.name} — Creative Direction & Production`,
     template: `%s — ${site.name}`,
   },
   description: site.tagline,
+  /* Page-level metadata replaces `openGraph` wholesale rather than merging into
+     it, so each page restates url/siteName. This is the homepage's own set. */
   openGraph: {
     title: `${site.name} — Creative Direction & Production`,
     description: site.tagline,
+    url: "/",
+    siteName: site.name,
     type: "website",
     locale: "en_US",
   },
+  /*
+   * Card type only. Title, description, and image are deliberately omitted so
+   * Next falls back to each page's own title/description/openGraph.images —
+   * stating them here would stamp the homepage's copy onto every shared URL,
+   * the same trap the per-page `openGraph` blocks already work around.
+   *
+   * `summary` rather than `summary_large_image`: most projects have no still
+   * yet, and a large-image card without an image renders an empty banner.
+   */
+  twitter: { card: "summary" },
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({

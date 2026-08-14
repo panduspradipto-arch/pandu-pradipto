@@ -14,7 +14,14 @@ const description =
 export const metadata: Metadata = {
   title: "Work",
   description,
-  openGraph: { title: `Work — ${site.name}`, description, type: "website" },
+  openGraph: {
+    title: `Work — ${site.name}`,
+    description,
+    url: "/work",
+    siteName: site.name,
+    type: "website",
+  },
+  alternates: { canonical: "/work" },
 };
 
 /**

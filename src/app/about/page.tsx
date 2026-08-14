@@ -21,8 +21,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: `About — ${site.name}`,
     description: about.passages[0].body,
+    url: "/about",
+    siteName: site.name,
     type: "profile",
   },
+  alternates: { canonical: "/about" },
 };
 
 /**

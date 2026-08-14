@@ -13,7 +13,14 @@ export const metadata: Metadata = {
   title: "Contact",
   description,
   /* Without this the root layout's openGraph is inherited. */
-  openGraph: { title: `Contact — ${site.name}`, description, type: "website" },
+  openGraph: {
+    title: `Contact — ${site.name}`,
+    description,
+    url: "/contact",
+    siteName: site.name,
+    type: "website",
+  },
+  alternates: { canonical: "/contact" },
 };
 
 /**

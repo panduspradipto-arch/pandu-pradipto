@@ -2,6 +2,17 @@ import type { NavLink, ProcessStep } from "@/types/content";
 
 export const site = {
   name: "Pandu Senopradipto",
+  /**
+   * Production origin. The ONLY place the deployed URL is written.
+   *
+   * `metadataBase` in the root layout reads this, which is what lets every
+   * canonical, Open Graph, and Twitter URL in the app be authored as a relative
+   * path and still be emitted absolute. Change this one line if the Vercel
+   * subdomain changes — nothing else references the host.
+   *
+   * No trailing slash: `new URL("/work", base)` needs the bare origin.
+   */
+  url: "https://pandu-pradipto.vercel.app",
   wordmark: "PANDU",
   location: "Jakarta",
   availability: "Available for work",
