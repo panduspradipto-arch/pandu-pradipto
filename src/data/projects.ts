@@ -362,6 +362,52 @@ export const projects: Project[] = [
       height: 1754,
     },
     summary: "Open pitch win for XL Axiata's B2B business unit.",
+    /*
+     * A-series poster artwork (0.707). `4:5` is the house ratio for that shape —
+     * the same choice the Anika covers already make — since the beat aspects are
+     * a fixed set and the frames cover-fit.
+     */
+    gallery: [
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "4:5",
+            media: {
+              src: "/media/xl-business-solutions/xl-inovasi-baru.jpg",
+              alt: 'XL Business Solutions — "Inovasi Baru untuk Mengangkat Bisnis Anda!"',
+            },
+          },
+          {
+            aspect: "4:5",
+            media: {
+              src: "/media/xl-business-solutions/xl-innovated-solution.jpg",
+              alt: 'XL Business Solutions — "Innovated Solution to innovate your Vision"',
+            },
+          },
+        ],
+      },
+      {
+        type: "portrait",
+        align: "left",
+        aspect: "4:5",
+        gap: "pause",
+        media: {
+          src: "/media/xl-business-solutions/xl-nbiot-simply-managed.jpg",
+          alt: 'XL Axiata NB-IoT — "Simply Managed and Securely Connected"',
+        },
+      },
+      {
+        type: "detail",
+        align: "right",
+        aspect: "4:5",
+        media: {
+          src: "/media/xl-business-solutions/xl-nbiot-precious-offer.jpg",
+          alt: 'XL Axiata NB-IoT — "Our Precious Offer for Your IoT Solution"',
+        },
+      },
+    ],
   },
   {
     slug: "djabesmen-ngga-bikin-tekor",
