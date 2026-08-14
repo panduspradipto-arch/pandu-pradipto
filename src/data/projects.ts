@@ -39,6 +39,12 @@ export const projects: Project[] = [
     role: "Art Direction",
     discipline: "art-direction",
     year: "2023",
+    media: {
+      src: "/media/bank-bri-giro/giro-bri.jpg",
+      alt: "Giro BRI print advertisement — two men with a bicycle outside a workshop",
+      width: 970,
+      height: 1456,
+    },
     studio: "Dentsu",
     summary: "ATL campaign launching GIRO to young entrepreneurs.",
     featured: true,
@@ -58,6 +64,12 @@ export const projects: Project[] = [
     client: "Woods'",
     discipline: "graphic-design",
     year: "2019",
+    media: {
+      src: "/media/woods-kalbe-farma/key-visual.jpg",
+      alt: "WOODS' cough syrup key visual — a presenter in front of a crowd beside the product range",
+      width: 1414,
+      height: 2000,
+    },
     summary: "Key visual campaign for cough-relief lozenges, talent-led and playful.",
     featured: true,
   },
@@ -85,6 +97,12 @@ export const projects: Project[] = [
     client: "Rucika",
     discipline: "graphic-design",
     year: "2019–20",
+    media: {
+      src: "/media/rucika-total-solution/kebahagiaan-air-mengalir.jpg",
+      alt: "Rucika print advertisement — a family leaping through a burst of water above the pipe range",
+      width: 1433,
+      height: 2000,
+    },
     summary: "Two-year TVC evolution from trade-focused to human storytelling.",
     featured: true,
   },
@@ -98,6 +116,12 @@ export const projects: Project[] = [
     role: "Executive Producer",
     discipline: "executive-producer",
     year: "2025",
+    media: {
+      src: "/media/btn-digital-store/title-card.jpg",
+      alt: "BTN Digital Store title card over a bank lobby",
+      width: 1920,
+      height: 1080,
+    },
     studio: "Cerahati",
     summary: "End-to-end production leadership for a seamless, on-brand TVC.",
   },
@@ -108,6 +132,12 @@ export const projects: Project[] = [
     role: "Art Direction",
     discipline: "art-direction",
     year: "2021–23",
+    media: {
+      src: "/media/bank-mandiri-corporate/partner-bisnis-andalan.jpg",
+      alt: "Bank Mandiri corporate banking advertisement — two bankers talking in a high-rise lobby",
+      width: 1365,
+      height: 1968,
+    },
     summary: "TVC development for Bank Mandiri's corporate banking division.",
   },
   {
@@ -117,6 +147,12 @@ export const projects: Project[] = [
     role: "Art Direction",
     discipline: "art-direction",
     year: "2021",
+    media: {
+      src: "/media/xl-business-solutions/paket-biz-bundling.jpg",
+      alt: "XL Business Solutions advertisement — a woman with a phone beside a grid of handset bundles",
+      width: 1241,
+      height: 1754,
+    },
     summary: "Open pitch win for XL Axiata's B2B business unit.",
   },
   {
@@ -125,6 +161,12 @@ export const projects: Project[] = [
     client: "Djabesmen",
     discipline: "graphic-design",
     year: "2019",
+    media: {
+      src: "/media/djabesmen-ngga-bikin-tekor/ngga-bikin-tekor.jpg",
+      alt: "Djabesmen roofing advertisement — a split frame contrasting a worn roof with a new one",
+      width: 2000,
+      height: 1549,
+    },
     summary: "Print campaign for asbestos roofing brand under Rucika Group.",
   },
   {
@@ -144,6 +186,12 @@ export const projects: Project[] = [
     role: "Art Director",
     discipline: "art-direction",
     year: "2022",
+    media: {
+      src: "/media/kitkat-mma-award/valentine-versi-gue.jpg",
+      alt: "KitKat \"Valentine Versi Gue\" key visual — two broken KitKat fingers on red",
+      width: 808,
+      height: 990,
+    },
     studio: "VMLY&R",
     summary: "Award-submission edit and motion graphics for KitKat Valentine's campaign.",
   },
@@ -191,6 +239,12 @@ export const projects: Project[] = [
     client: "Schwarzkopf Professional",
     discipline: "graphic-design",
     year: "2022",
+    media: {
+      src: "/media/schwarzkopf-hvar-hair/blondme-masterclass.jpg",
+      alt: "Schwarzkopf Professional BLONDME Master Class poster with H'Var Hair",
+      width: 1080,
+      height: 1080,
+    },
     summary: "Collaboration campaign for Schwarzkopf Professional Indonesia.",
   },
   {
@@ -207,6 +261,15 @@ export const projects: Project[] = [
     discipline: "social-media",
     year: "2021",
     summary: "Ongoing social media management for TriPollar skincare devices.",
+    /* The archive card reads `media`; `heroMedia` only feeds the detail
+       page, so without this the card shows a placeholder despite the
+       project having artwork. */
+    media: {
+      src: "/media/tripollar-indonesia/kv-july-01.jpg",
+      alt: "TriPollar key visual — three women together, the brand mark below them",
+      width: 2000,
+      height: 2000,
+    },
     /*
      * Project scope. Says "content development" rather than "content design" —
      * the creative team handled design and day-to-day execution, so the brief
@@ -335,6 +398,12 @@ export const projects: Project[] = [
     client: "MLBB",
     discipline: "social-media",
     year: "2023",
+    media: {
+      src: "/media/mlbb-valentines/campaign-still.jpg",
+      alt: "Mobile Legends campaign still — the game logo over a schoolyard flagpole",
+      width: 1080,
+      height: 1920,
+    },
     summary: "Seasonal content campaign for Mobile Legends: Bang Bang.",
   },
   {
@@ -347,6 +416,15 @@ export const projects: Project[] = [
     discipline: "publishing",
     year: "2026",
     summary: "Children's book illustration and design, published by Pibo.",
+    /* The archive card reads `media`; `heroMedia` only feeds the detail
+       page, so without this the card shows a placeholder despite the
+       project having artwork. */
+    media: {
+      src: "/media/anika-worry-monster/cover.jpg",
+      alt: "Cover of Anika & the Worry Monster",
+      width: 1414,
+      height: 2000,
+    },
     heroMedia: {
       src: "/media/anika-worry-monster/cover.jpg",
       alt: "Cover of Anika & the Worry Monster",

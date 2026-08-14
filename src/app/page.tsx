@@ -22,6 +22,14 @@ export default function HomePage() {
       <Hero
         headline={["Ideas,", "Produced."]}
         lead={site.tagline}
+        /* Hero.tsx already takes `media`; passing it here replaces the
+           placeholder without touching the hero's layout or animation. */
+        media={{
+          src: "/profile/pandu-pradipto.jpg",
+          alt: "Pandu Senopradipto on a Jakarta street at night, city lights streaking behind him",
+          width: 1264,
+          height: 842,
+        }}
         primaryCta={{ label: "View Selected Work", href: "/work" }}
         secondaryCta={{ label: "Let's Work Together", href: "#contact" }}
       />
