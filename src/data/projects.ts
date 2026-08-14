@@ -181,6 +181,113 @@ export const projects: Project[] = [
           alt: "Live cooking show announcement card featuring the pit master",
         },
       },
+
+      /* ---- Clean & Green Jakarta — the second brand in this record ---- */
+      {
+        type: "frame",
+        gap: "pause",
+        aspect: "1:1",
+        media: {
+          src: "/media/hotlicks-clean-green-jakarta/clean-green-plastic-monster.jpg",
+          alt: 'Plastic bag drawn as a monster under the line "How Can A Plastic Can Be A Monster"',
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "1:1",
+            media: {
+              src: "/media/hotlicks-clean-green-jakarta/clean-green-beverage-cartons.jpg",
+              alt: 'Beverage cartons with cartoon eyes — "Your used beverage cartons can be useful!"',
+            },
+          },
+          {
+            aspect: "1:1",
+            media: {
+              src: "/media/hotlicks-clean-green-jakarta/clean-green-sorting-dry-waste.jpg",
+              alt: 'Yellow waste bag drawn as a character — "The Next Level of Sorting Waste"',
+            },
+          },
+        ],
+      },
+      {
+        type: "detail",
+        align: "left",
+        aspect: "1:1",
+        media: {
+          src: "/media/hotlicks-clean-green-jakarta/clean-green-logo.jpg",
+          alt: "Clean & Green Jakarta logo lockup",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "3:2",
+            media: {
+              src: "/media/hotlicks-clean-green-jakarta/clean-green-tshirts.jpg",
+              alt: "Branded t-shirts, front and back",
+            },
+          },
+          {
+            aspect: "3:2",
+            media: {
+              src: "/media/hotlicks-clean-green-jakarta/clean-green-bottles.jpg",
+              alt: "Two branded drinking bottles",
+            },
+          },
+        ],
+      },
+      {
+        type: "portrait",
+        align: "right",
+        aspect: "9:16",
+        gap: "pause",
+        media: {
+          src: "/media/hotlicks-clean-green-jakarta/clean-green-bottle-photo.jpg",
+          alt: "Hands holding a used plastic bottle, tinted green",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "3:2",
+            media: {
+              src: "/media/hotlicks-clean-green-jakarta/clean-green-tote.jpg",
+              alt: "Branded tote bag with the pattern applied",
+            },
+          },
+          {
+            aspect: "3:2",
+            media: {
+              src: "/media/hotlicks-clean-green-jakarta/clean-green-bin-bag.jpg",
+              alt: "Branded bin bag",
+            },
+          },
+        ],
+      },
+      {
+        type: "frame",
+        aspect: "3:2",
+        media: {
+          src: "/media/hotlicks-clean-green-jakarta/clean-green-bins.jpg",
+          alt: "Three waste bins in the brand's colours",
+        },
+      },
+      {
+        type: "detail",
+        align: "right",
+        aspect: "1:1",
+        media: {
+          src: "/media/hotlicks-clean-green-jakarta/clean-green-anxious-about-waste.jpg",
+          alt: 'Green character on a blue ground — "Which of these photos makes you even more anxious about waste?"',
+        },
+      },
     ],
   },
   {
