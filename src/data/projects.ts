@@ -670,6 +670,17 @@ export const projects: Project[] = [
     role: "Art Director",
     discipline: "art-direction",
     year: "2022",
+    gallery: [
+      {
+        type: "frame",
+        aspect: "16:9",
+        media: {
+          src: "/media/kitkat-mma-award/kitkat-valentine-still.jpg",
+          alt: "Still from the KitKat Valentine edit — three people eating KitKat",
+        },
+        caption: "Still from the campaign film",
+      },
+    ],
     media: {
       src: "/media/kitkat-mma-award/valentine-versi-gue.jpg",
       alt: "KitKat \"Valentine Versi Gue\" key visual — two broken KitKat fingers on red",
@@ -1252,6 +1263,17 @@ export const projects: Project[] = [
     client: "MLBB",
     discipline: "social-media",
     year: "2023",
+    gallery: [
+      {
+        type: "frame",
+        aspect: "16:9",
+        media: {
+          src: "/media/mlbb-valentines/mlbb-valentine-still.jpg",
+          alt: "Still from the MLBB Valentine film — a student holding a bouquet under an umbrella",
+        },
+        caption: "Still from the campaign film",
+      },
+    ],
     media: {
       src: "/media/mlbb-valentines/campaign-still.jpg",
       alt: "Mobile Legends campaign still — the game logo over a schoolyard flagpole",
@@ -1326,6 +1348,12 @@ export const projects: Project[] = [
     /* Discipline id, not the employment title. See DATA RULES above. */
     discipline: "multimedia",
     year: "2023–2024",
+    media: {
+      src: "/media/govtech-procurement/govtech-ekatalog.jpg",
+      alt: "Still from the LKPP e-Katalog film — a village official using a tablet",
+      width: 1920,
+      height: 1080,
+    },
     summary: "Content production, motion graphics, and video for GovTech Procurement.",
     production: ["Art Director", "Animator", "Videographer"],
     /* Owner's words, verbatim. Covers Art Direction, animation, and videography
@@ -1351,6 +1379,15 @@ export const projects: Project[] = [
         gap: "pause",
         video: { provider: "youtube", id: "MGxsfQEYh9Y" },
         caption: "Creative Art Director — Digital Video Commercial",
+      },
+      {
+        type: "frame",
+        aspect: "16:9",
+        media: {
+          src: "/media/govtech-procurement/govtech-google-summit.jpg",
+          alt: "Google Cloud Summit Jakarta stage screen",
+        },
+        caption: "Event documentation — Google Cloud Summit Jakarta",
       },
     ],
   },
