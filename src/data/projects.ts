@@ -38,7 +38,8 @@ export const projects: Project[] = [
     client: "Bank BRI",
     role: "Art Direction",
     discipline: "art-direction",
-    year: "2023",
+    /* Owner's file naming is authoritative — file: TVC 2022 - BRI Giro + KV Giro 2024. */
+    year: "2022–2024",
     media: {
       /* Same artwork as before, re-exported from the owner's curated source at
          1344x2000 — the earlier file was 970x1456. */
@@ -165,7 +166,8 @@ export const projects: Project[] = [
     title: "Two Brand Launches",
     client: "Hotlicks & CGJ",
     discipline: "social-media",
-    year: "2023",
+    /* Owner's file naming is authoritative — file: Branding 2022 Clean & Green; Hotlicks 2023. */
+    year: "2022–2023",
     summary: "Two brand identities built from zero, content and campaign management.",
     featured: true,
     media: {
@@ -519,7 +521,8 @@ export const projects: Project[] = [
     client: "Bank Mandiri",
     role: "Art Direction",
     discipline: "art-direction",
-    year: "2021–23",
+    /* Owner's file naming is authoritative — file: KV/DVC 2020 - Mandiri Corporate Bank. */
+    year: "2020",
     media: {
       src: "/media/bank-mandiri-corporate/partner-bisnis-andalan.jpg",
       alt: "Bank Mandiri corporate banking advertisement — two bankers talking in a high-rise lobby",
@@ -565,7 +568,8 @@ export const projects: Project[] = [
     client: "XL Axiata",
     role: "Art Direction",
     discipline: "art-direction",
-    year: "2021",
+    /* Owner's file naming is authoritative — file: KV Vertical - XL Business Solution 2019. */
+    year: "2019",
     media: {
       src: "/media/xl-business-solutions/paket-biz-bundling.jpg",
       alt: "XL Business Solutions advertisement — a woman with a phone beside a grid of handset bundles",
@@ -834,7 +838,8 @@ export const projects: Project[] = [
     displayTitle: "H'var Hair",
     client: "Schwarzkopf Professional",
     discipline: "graphic-design",
-    year: "2022",
+    /* Owner's file naming is authoritative — file: Content Video 2023 - Schwarzkopf. */
+    year: "2023",
     media: {
       src: "/media/schwarzkopf-hvar-hair/blondme-masterclass.jpg",
       alt: "Schwarzkopf Professional BLONDME Master Class poster with H'Var Hair",
@@ -1262,7 +1267,8 @@ export const projects: Project[] = [
     title: "MLBB Valentine's Day Campaign",
     client: "MLBB",
     discipline: "social-media",
-    year: "2023",
+    /* Owner's file naming is authoritative — file: DVC 2026 - MLBB Valentine x Zee Asadel. */
+    year: "2026",
     gallery: [
       {
         type: "frame",
