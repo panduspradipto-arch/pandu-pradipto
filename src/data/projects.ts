@@ -1618,6 +1618,99 @@ export const projects: Project[] = [
         media: { src: "/media/japota/japota-beef-bbq.jpg", alt: "Speaker presenting the Beef BBQ variant on stage" },
         caption: "Event documentation" },
     ],
+  },
+  /* ---- Pitch / exploration work ----
+   * Shown on the strength of the craft. No outcome is stated for any of these:
+   * whether a pitch was won is not part of the work, and the owner asked that
+   * they not be framed that way. `role` is unset throughout — none was supplied.
+   * Each is labelled "Pitch" via `category`, matching the [Pitch] prefix the
+   * owner uses in his own file naming.
+   */
+  {
+    slug: "antangin-bablas-angin",
+    title: "Hangatnya Antangin",
+    client: "Antangin",
+    category: "Pitch",
+    discipline: "graphic-design",
+    year: "2019",
+    studio: "Dwi Sapta",
+    summary: "Pitch project.",
+    media: { src: "/media/antangin/antangin-bablas-angin.jpg", alt: "Antangin JRG key visual surrounded by herbs and honey", width: 1313, height: 2000 },
+    gallery: [
+      { type: "portrait", align: "right", aspect: "4:5",
+        media: { src: "/media/antangin/antangin-pantang-keanginan.jpg", alt: "Antangin JRG key visual — Hangatnya Pantang Keanginan" } },
+    ],
+  },
+  {
+    slug: "balsem-lang-pitch",
+    title: "Sikat Sama Balsem Lang",
+    client: "Balsem Lang",
+    category: "Pitch",
+    discipline: "graphic-design",
+    year: "2020",
+    studio: "Dwi Sapta",
+    summary: "Pitch project.",
+    media: { src: "/media/balsem-lang/balsem-cepat-aktif.jpg", alt: "Balsem Lang key visual with a superhero figure and product", width: 1414, height: 2000 },
+    gallery: [
+      { type: "frame", aspect: "3:2",
+        media: { src: "/media/balsem-lang/balsem-concall.jpg", alt: "Balsem Lang key visual set inside a video-call grid" } },
+      { type: "pair", variant: "even", gap: "pause", items: [
+        { aspect: "16:9", media: { src: "/media/balsem-lang/balsem-tenda.jpg", alt: "Balsem Lang event tents in a public square" } },
+        { aspect: "3:2", media: { src: "/media/balsem-lang/balsem-shelf-talker.jpg", alt: "Balsem Lang shelf talker on a retail shelf" } },
+      ] },
+    ],
+  },
+  {
+    slug: "benstar-energi",
+    title: "Energi untuk Terus Beraksi",
+    client: "BenStar",
+    category: "Pitch",
+    discipline: "graphic-design",
+    year: "2020",
+    studio: "Dwi Sapta",
+    summary: "Pitch project.",
+    media: { src: "/media/benstar/benstar-energi-1.jpg", alt: "BenStar key visual — children as heroes against a cosmic background", width: 1414, height: 2000 },
+    gallery: [
+      { type: "portrait", align: "left", aspect: "4:5",
+        media: { src: "/media/benstar/benstar-energi-2.jpg", alt: "BenStar key visual — children bursting out of a comic panel" } },
+    ],
+  },
+  {
+    slug: "daihatsu-genuine-oil",
+    title: "Satu Oli untuk Semua Sahabat",
+    client: "Daihatsu",
+    category: "Pitch",
+    discipline: "graphic-design",
+    year: "2018–2019",
+    studio: "Dwi Sapta",
+    summary: "Pitch project.",
+    media: { src: "/media/daihatsu/daihatsu-satu-oli.jpg", alt: "Daihatsu Genuine Oil key visual with the model range", width: 1274, height: 2000 },
+    gallery: [
+      { type: "frame", aspect: "3:2",
+        media: { src: "/media/daihatsu/daihatsu-ayla-wrap.jpg", alt: "Daihatsu Ayla with a patterned vehicle wrap in a studio" } },
+    ],
+  },
+  {
+    slug: "energen-kaya-serat",
+    title: "Kaya Serat",
+    client: "Energen",
+    category: "Pitch",
+    discipline: "graphic-design",
+    year: "2021",
+    studio: "Dwi Sapta",
+    summary: "Pitch project.",
+    media: { src: "/media/energen/energen-kaya-serat.jpg", alt: "Energen key visual — a boy holding a mug surrounded by cereal, egg and milk", width: 1413, height: 2000 },
+  },
+  {
+    slug: "sania-terbaik-dari-ibu",
+    title: "Terbaik dari Ibu untuk Keluarga",
+    client: "Sania",
+    category: "Pitch",
+    discipline: "graphic-design",
+    year: "2019",
+    studio: "Dwi Sapta",
+    summary: "Pitch project.",
+    media: { src: "/media/sania/sania-terbaik-dari-ibu.jpg", alt: "Sania cooking oil key visual composed as a trophy of vegetables", width: 1413, height: 2000 },
   }
 ];
 
