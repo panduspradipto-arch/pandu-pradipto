@@ -1558,6 +1558,66 @@ export const projects: Project[] = [
       { type: "frame", aspect: "21:9", gap: "pause",
         media: { src: "/media/bank-bri/bri-debit-card.jpg", alt: "BRI debit card special edition designs" } },
     ],
+  },
+  {
+    /* Poster stills — no public URL for these films, so images stand in and the
+       beats can become `film` when a URL exists. */
+    slug: "micromine-manifesto",
+    title: "Manifesto",
+    client: "Micromine",
+    role: "Creative Director",
+    discipline: "art-direction",
+    year: "2023",
+    media: {
+      src: "/media/micromine/micromine-quarry.jpg",
+      alt: "Still from the Micromine company film — a haul truck working an open pit",
+      width: 1920,
+      height: 1080,
+    },
+    gallery: [
+      { type: "frame", aspect: "16:9",
+        media: { src: "/media/micromine/micromine-manifesto.jpg", alt: "Still from the Micromine film — figures silhouetted against dust and light" },
+        caption: "Still from the company film" },
+    ],
+  },
+  {
+    slug: "royco-aadc",
+    title: "AADC Teaser",
+    client: "Royco",
+    role: "Project Manager",
+    discipline: "multimedia",
+    year: "2026",
+    studio: "Seven Sunday Films",
+    media: {
+      src: "/media/royco/royco-teaser.jpg",
+      alt: "Still from the Royco teaser — a woman at a desk",
+      width: 1920,
+      height: 1080,
+    },
+    gallery: [
+      { type: "portrait", align: "right", aspect: "9:16",
+        media: { src: "/media/royco/royco-vertical.jpg", alt: "Vertical still from the Royco teaser — a woman at a vintage microphone" },
+        caption: "Still from the campaign film" },
+    ],
+  },
+  {
+    slug: "japota-jkt48",
+    title: "Japota x JKT48 Press Conference",
+    client: "Japota",
+    role: "Videographer",
+    discipline: "multimedia",
+    year: "2024",
+    media: {
+      src: "/media/japota/japota-press-conference.jpg",
+      alt: "Press conference stage with Japota packaging behind the speakers",
+      width: 1276,
+      height: 720,
+    },
+    gallery: [
+      { type: "frame", aspect: "16:9",
+        media: { src: "/media/japota/japota-beef-bbq.jpg", alt: "Speaker presenting the Beef BBQ variant on stage" },
+        caption: "Event documentation" },
+    ],
   }
 ];
 
