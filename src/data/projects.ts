@@ -40,14 +40,62 @@ export const projects: Project[] = [
     discipline: "art-direction",
     year: "2023",
     media: {
+      /* Same artwork as before, re-exported from the owner's curated source at
+         1344x2000 — the earlier file was 970x1456. */
       src: "/media/bank-bri-giro/giro-bri.jpg",
       alt: "Giro BRI print advertisement — two men with a bicycle outside a workshop",
-      width: 970,
-      height: 1456,
+      width: 1344,
+      height: 2000,
     },
     studio: "Dentsu",
     summary: "ATL campaign launching GIRO to young entrepreneurs.",
     featured: true,
+    /*
+     * Giro artwork only. The owner's asset folder also holds eighteen other BRI
+     * pieces — Briguna, KPR, Kartini, HIMBARA, SR015, ST008, SBR-010, BRIefx
+     * and IBBIZ — which belong to different BRI engagements, not to Giro. They
+     * stay out until there is a record to put them in.
+     */
+    gallery: [
+      {
+        type: "bleed",
+        aspect: "3:2",
+        media: {
+          src: "/media/bank-bri-giro/giro-korporasi.jpg",
+          alt: "Giro BRI corporate advertisement — a businessman on the phone at his desk",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        gap: "pause",
+        items: [
+          {
+            aspect: "9:16",
+            media: {
+              src: "/media/bank-bri-giro/giro-ukm-workshop.jpg",
+              alt: "Giro BRI advertisement — two craftsmen working on a leather piece",
+            },
+          },
+          {
+            aspect: "9:16",
+            media: {
+              src: "/media/bank-bri-giro/giro-ukm-cafe.jpg",
+              alt: "Giro BRI advertisement — baristas at work behind a café counter",
+            },
+          },
+        ],
+      },
+      {
+        type: "frame",
+        aspect: "16:9",
+        media: {
+          src: "/media/bank-bri-giro/giro-tvc-still.jpg",
+          alt: "Still from the Giro BRI commercial — a man reviewing a folder",
+        },
+        caption: "Still from the campaign film",
+      },
+    ],
   },
   {
     slug: "cimory-tayo-dance",
