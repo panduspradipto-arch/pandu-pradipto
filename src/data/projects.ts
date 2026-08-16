@@ -501,6 +501,17 @@ export const projects: Project[] = [
     },
     studio: "Cerahati",
     summary: "End-to-end production leadership for a seamless, on-brand TVC.",
+    gallery: [
+      {
+        type: "frame",
+        aspect: "16:9",
+        media: {
+          src: "/media/btn-digital-store/showroom.jpg",
+          alt: "Still from the BTN Digital Store film — customers in a bank showroom",
+        },
+        caption: "Still from the campaign film",
+      },
+    ],
   },
   {
     slug: "bank-mandiri-corporate",
@@ -525,6 +536,26 @@ export const projects: Project[] = [
           src: "/media/bank-mandiri-corporate/mandiri-selalu-di-sisi-anda.jpg",
           alt: 'Bank Mandiri advertisement — "selalu di sisi Anda, wujudkan setiap rencana besar"',
         },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        items: [
+          {
+            aspect: "9:16",
+            media: {
+              src: "/media/bank-mandiri-corporate/partner-andalan.jpg",
+              alt: 'Bank Mandiri advertisement — "partner andalan memberikan segala kemudahan"',
+            },
+          },
+          {
+            aspect: "9:16",
+            media: {
+              src: "/media/bank-mandiri-corporate/partner-terpercaya.jpg",
+              alt: 'Bank Mandiri advertisement — "partner terpercaya, wujudkan langkah besar Anda"',
+            },
+          },
+        ],
       },
     ],
   },
