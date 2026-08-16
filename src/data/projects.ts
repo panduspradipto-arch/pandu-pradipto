@@ -103,6 +103,25 @@ export const projects: Project[] = [
     client: "Cimory",
     discipline: "freelance-creative",
     year: "2024",
+    media: {
+      src: "/media/cimory-tayo-dance/cimory-tayo-dance.jpg",
+      alt: "Still from the Cimory x Tayo film — the Tayo bus with children on a lawn",
+      width: 1920,
+      height: 1080,
+    },
+    /* Poster stills from the film. No public video URL exists, so these are
+       images rather than `film` beats; swap them when a URL lands. */
+    gallery: [
+      {
+        type: "frame",
+        aspect: "16:9",
+        media: {
+          src: "/media/cimory-tayo-dance/cimory-tayo-park.jpg",
+          alt: "Giant Cimory bottles and the Tayo bus at the park entrance",
+        },
+        caption: "Still from the campaign film",
+      },
+    ],
     summary: "Pitch-winning 15s spot with cross-border 3D animation.",
     featured: true,
   },
@@ -344,6 +363,26 @@ export const projects: Project[] = [
     client: "MLBB",
     discipline: "social-media",
     year: "2023",
+    media: {
+      src: "/media/mlbb-ramadan/mlbb-ramadhan-talent.jpg",
+      alt: "Still from the MLBB Ramadan film — talent in front of character posters",
+      width: 1080,
+      height: 1920,
+    },
+    /* Poster stills from the film. No public video URL exists, so these are
+       images rather than `film` beats; swap them when a URL lands. */
+    gallery: [
+      {
+        type: "portrait",
+        aspect: "9:16",
+        align: "left",
+        media: {
+          src: "/media/mlbb-ramadan/mlbb-ramadhan-phone.jpg",
+          alt: "A hand reaching for a phone on a table",
+        },
+        caption: "Still from the campaign film",
+      },
+    ],
     summary: "AI-assisted video production with A/B creative testing.",
     featured: true,
   },
@@ -540,6 +579,25 @@ export const projects: Project[] = [
     role: "Art Director",
     discipline: "art-direction",
     year: "2022",
+    media: {
+      src: "/media/prudential-syariah/prudential-foodcourt.jpg",
+      alt: "Still from the Prudential Syariah film — a food court under string lights",
+      width: 1280,
+      height: 720,
+    },
+    /* Poster stills from the film. No public video URL exists, so these are
+       images rather than `film` beats; swap them when a URL lands. */
+    gallery: [
+      {
+        type: "frame",
+        aspect: "16:9",
+        media: {
+          src: "/media/prudential-syariah/prudential-table.jpg",
+          alt: "Two women talking at a table",
+        },
+        caption: "Still from the campaign film",
+      },
+    ],
     studio: "VMLY&R",
     summary: "Brand campaign for Prudential's Syariah insurance line.",
   },
@@ -575,6 +633,26 @@ export const projects: Project[] = [
     client: "ABC",
     discipline: "graphic-design",
     year: "2024",
+    media: {
+      src: "/media/abc-sirup-ramadan/abc-family.jpg",
+      alt: "Still from the ABC Sirup film — a family gathered around the table",
+      width: 607,
+      height: 1080,
+    },
+    /* Poster stills from the film. No public video URL exists, so these are
+       images rather than `film` beats; swap them when a URL lands. */
+    gallery: [
+      {
+        type: "portrait",
+        aspect: "9:16",
+        align: "left",
+        media: {
+          src: "/media/abc-sirup-ramadan/abc-product.jpg",
+          alt: "ABC Sirup bottles arranged in a basket",
+        },
+        caption: "Still from the campaign film",
+      },
+    ],
   },
   {
     slug: "realme-14-series",
@@ -583,6 +661,26 @@ export const projects: Project[] = [
     role: "Executive Producer",
     discipline: "executive-producer",
     year: "2025",
+    media: {
+      src: "/media/realme-14-series/realme-street.jpg",
+      alt: "Still from the realme film — a man beside a yellow car holding the phone",
+      width: 607,
+      height: 1080,
+    },
+    /* Poster stills from the film. No public video URL exists, so these are
+       images rather than `film` beats; swap them when a URL lands. */
+    gallery: [
+      {
+        type: "portrait",
+        aspect: "9:16",
+        align: "left",
+        media: {
+          src: "/media/realme-14-series/realme-device.jpg",
+          alt: "Close-up of the realme handset in hand",
+        },
+        caption: "Still from the campaign film",
+      },
+    ],
     studio: "Cerahati",
     summary: "Product launch TVC production for Realme Indonesia.",
   },
@@ -1057,6 +1155,26 @@ export const projects: Project[] = [
     role: "Creative Production",
     discipline: "social-media",
     year: "2023–2024",
+    media: {
+      src: "/media/mila-dopiz/mila-serum-talent.jpg",
+      alt: "Still from the Mila D'Opiz film — talent holding the serum",
+      width: 1080,
+      height: 1920,
+    },
+    /* Poster stills from the film. No public video URL exists, so these are
+       images rather than `film` beats; swap them when a URL lands. */
+    gallery: [
+      {
+        type: "portrait",
+        aspect: "9:16",
+        align: "left",
+        media: {
+          src: "/media/mila-dopiz/mila-product.jpg",
+          alt: "Mila D'Opiz concentrate bottle on a dark surface",
+        },
+        caption: "Still from the campaign film",
+      },
+    ],
     summary: "Social media content production, from video concept through execution.",
     brief:
       "Social media content production for Mila D'Opiz, developing video concepts and producing social-first content from ideation through execution.",
