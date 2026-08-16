@@ -1514,6 +1514,50 @@ export const projects: Project[] = [
         { aspect: "16:9", media: { src: "/media/takeda/takeda-nenek.jpg", alt: "Dengue prevention key visual addressing older adults" } },
       ] },
     ],
+  },
+  {
+    /*
+     * Separate from `bank-bri-giro`. That record is the Giro brand film; this
+     * one holds the wider BRI engagement across Maleo and Dentsu — retail
+     * lending, investment products, tactical promos and two identity revamps.
+     */
+    slug: "bank-bri-campaigns",
+    title: "Campaign Key Visuals",
+    client: "Bank BRI",
+    role: "Art Director",
+    discipline: "art-direction",
+    year: "2021–2024",
+    studio: "Maleo & Dentsu",
+    media: {
+      src: "/media/bank-bri/bri-briguna.jpg",
+      alt: "BRIguna Merdeka key visual — a graduate against a blue sky",
+      width: 1429,
+      height: 2000,
+    },
+    gallery: [
+      { type: "bleed", aspect: "16:9",
+        media: { src: "/media/bank-bri/bri-visa-tactical.jpg", alt: "BRI tactical promotion banner with partner offers" } },
+      { type: "pair", variant: "even", gap: "pause", items: [
+        { aspect: "4:5", media: { src: "/media/bank-bri/bri-kartini.jpg", alt: "BRI Private key visual for Kartini's Day privileges" } },
+        { aspect: "4:5", media: { src: "/media/bank-bri/bri-kpr.jpg", alt: "KPR BRI Top Up key visual with a voucher offer" } },
+      ] },
+      { type: "portrait", align: "left", aspect: "4:5",
+        media: { src: "/media/bank-bri/bri-himbara.jpg", alt: "BRI travel campaign key visual shot in Bali" } },
+      { type: "pair", variant: "even", items: [
+        { aspect: "4:5", media: { src: "/media/bank-bri/bri-davestera.jpg", alt: "BRI Prioritas Davestera investment key visual" } },
+        { aspect: "4:5", media: { src: "/media/bank-bri/bri-sbr010.jpg", alt: "SBR010 investment key visual — figures stepping through open doors" } },
+      ] },
+      { type: "frame", aspect: "21:9", gap: "pause",
+        media: { src: "/media/bank-bri/bri-briefx.jpg", alt: "BRIefx Foreign Exchange Solution logo revamp" } },
+      { type: "pair", variant: "even", items: [
+        { aspect: "9:16", media: { src: "/media/bank-bri/bri-tactical-1.jpg", alt: "BRI tactical promo story frame with partner discounts" } },
+        { aspect: "9:16", media: { src: "/media/bank-bri/bri-tactical-2.jpg", alt: "BRI Private greeting frame for Mawlid an-Nabi" } },
+      ] },
+      { type: "detail", align: "right", aspect: "3:2",
+        media: { src: "/media/bank-bri/bri-ibbiz.jpg", alt: "BRI ibbiz logo revamp" } },
+      { type: "frame", aspect: "21:9", gap: "pause",
+        media: { src: "/media/bank-bri/bri-debit-card.jpg", alt: "BRI debit card special edition designs" } },
+    ],
   }
 ];
 
