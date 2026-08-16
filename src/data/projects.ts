@@ -138,6 +138,26 @@ export const projects: Project[] = [
       height: 2000,
     },
     summary: "Key visual campaign for cough-relief lozenges, talent-led and playful.",
+    gallery: [
+      {
+        type: "frame",
+        aspect: "3:2",
+        media: {
+          src: "/media/woods-kalbe-farma/woods-lozenges-lanjut.jpg",
+          alt: 'WOODS\' lozenges key visual — a caricatured singer beside the Honey Lemon and Blackcurrant packs',
+        },
+      },
+      {
+        type: "portrait",
+        align: "right",
+        aspect: "4:5",
+        gap: "pause",
+        media: {
+          src: "/media/woods-kalbe-farma/woods-lozenges-new-formula.jpg",
+          alt: "WOODS' Peppermint Lozenges new formula key visual with honey, lemon and blackcurrant",
+        },
+      },
+    ],
     featured: true,
   },
   {
@@ -496,6 +516,17 @@ export const projects: Project[] = [
       height: 1968,
     },
     summary: "TVC development for Bank Mandiri's corporate banking division.",
+    gallery: [
+      {
+        type: "portrait",
+        align: "left",
+        aspect: "9:16",
+        media: {
+          src: "/media/bank-mandiri-corporate/mandiri-selalu-di-sisi-anda.jpg",
+          alt: 'Bank Mandiri advertisement — "selalu di sisi Anda, wujudkan setiap rencana besar"',
+        },
+      },
+    ],
   },
   {
     slug: "xl-business-solutions",
