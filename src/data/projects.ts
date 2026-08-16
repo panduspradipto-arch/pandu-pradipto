@@ -547,6 +547,67 @@ export const projects: Project[] = [
     year: "2025",
     studio: "Cerahati",
     summary: "Brand campaign production for J&T Express Indonesia.",
+    media: {
+      src: "/media/jnt-express/jnt-courier-portrait.jpg",
+      alt: "J&T Express courier laughing on a motorbike in the studio",
+      width: 2000,
+      height: 1333,
+    },
+    /*
+     * Photographed by Bhagas N, per the owner's 2026 deck. The owner produced
+     * this shoot rather than shooting it, so the credit is stated to keep the
+     * authorship of the frames unambiguous.
+     */
+    credits: [{ role: "Photographer", name: "Bhagas N" }],
+    gallery: [
+      {
+        type: "bleed",
+        aspect: "3:2",
+        media: {
+          src: "/media/jnt-express/jnt-courier-scooter.jpg",
+          alt: "Courier riding a scooter with a J&T delivery bag, side on",
+        },
+      },
+      {
+        type: "pair",
+        variant: "even",
+        gap: "pause",
+        items: [
+          {
+            aspect: "3:2",
+            media: {
+              src: "/media/jnt-express/jnt-delivery-received.jpg",
+              alt: "Three friends reacting to a parcel on the table",
+            },
+          },
+          {
+            aspect: "3:2",
+            media: {
+              src: "/media/jnt-express/jnt-living-room.jpg",
+              alt: "Living room scene with a J&T parcel on the coffee table",
+            },
+          },
+        ],
+      },
+      {
+        type: "portrait",
+        align: "right",
+        aspect: "9:16",
+        media: {
+          src: "/media/jnt-express/jnt-courier-calling.jpg",
+          alt: "Courier calling out, hands cupped to his mouth",
+        },
+      },
+      {
+        type: "frame",
+        gap: "pause",
+        aspect: "3:2",
+        media: {
+          src: "/media/jnt-express/jnt-envelope-studio.jpg",
+          alt: "Talent holding a J&T envelope, studio lights in frame",
+        },
+      },
+    ],
   },
   {
     slug: "schwarzkopf-hvar-hair",
