@@ -1397,6 +1397,124 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    /* Role and year confirmed by the owner. `summary` is deliberately unset —
+       none was supplied, and none may be written from artwork. */
+    slug: "telon-lang-sentuhan-ibu",
+    title: "Sentuhan Hangat Cinta Ibu",
+    client: "Telon Lang",
+    role: "Senior Graphic Design",
+    discipline: "graphic-design",
+    year: "2018–2019",
+    studio: "Dwi Sapta",
+    media: {
+      src: "/media/telon-lang/telon-sentuhan-ibu.jpg",
+      alt: "Telon Lang key visual — a mother massaging her baby",
+      width: 1491,
+      height: 2000,
+    },
+    gallery: [
+      { type: "pair", variant: "even", items: [
+        { aspect: "4:5", media: { src: "/media/telon-lang/telon-plus-sentuhan-ibu.jpg", alt: "Telon Lang Plus key visual — a mother and child playing on the floor" } },
+        { aspect: "4:5", media: { src: "/media/telon-lang/telon-product-2018.jpg", alt: "Telon Lang Plus 10 Jam product key visual" } },
+      ] },
+      { type: "detail", align: "left", aspect: "1:1", gap: "pause",
+        media: { src: "/media/telon-lang/telon-maskot.jpg", alt: "Telon Lang bottle mascot character" } },
+      { type: "pair", variant: "even", items: [
+        { aspect: "3:2", media: { src: "/media/telon-lang/telon-ceria.jpg", alt: "Telon Lang Ceria carton and bottle" } },
+        { aspect: "3:2", media: { src: "/media/telon-lang/telon-posm-umbul.jpg", alt: "Telon Lang street banners installed along a shopfront row" } },
+      ] },
+      { type: "frame", aspect: "16:9", gap: "pause",
+        media: { src: "/media/telon-lang/telon-storyboard.jpg", alt: "Frame from the Telon Lang product storyboard" } },
+      { type: "portrait", align: "right", aspect: "4:5",
+        media: { src: "/media/telon-lang/telon-tactical.jpg", alt: "Telon Lang tactical promotion key visual for Alfamart" } },
+    ],
+  },
+  {
+    /* The finished, public-facing JOAYO work. The confidential pitch and source
+       material for this client remains excluded. */
+    slug: "joayo-mantan-cemilan",
+    title: "Mantan Cemilan",
+    client: "JOAYO",
+    role: "Senior Graphic Design",
+    discipline: "graphic-design",
+    year: "2020",
+    studio: "Dwi Sapta",
+    media: {
+      src: "/media/joayo/joayo-kv.jpg",
+      alt: "JOAYO key visual — Love at the First Crunch",
+      width: 1414,
+      height: 2000,
+    },
+    gallery: [
+      { type: "pair", variant: "even", items: [
+        { aspect: "1:1", media: { src: "/media/joayo/joayo-content-1.jpg", alt: "JOAYO social post — a woman laughing" } },
+        { aspect: "1:1", media: { src: "/media/joayo/joayo-content-2.jpg", alt: "JOAYO social post — a woman in tears" } },
+      ] },
+      { type: "frame", aspect: "16:9", gap: "pause",
+        media: { src: "/media/joayo/joayo-store-gate.jpg", alt: "JOAYO store gate installed at a convenience store entrance" } },
+      { type: "pair", variant: "even", items: [
+        { aspect: "3:2", media: { src: "/media/joayo/joayo-table-display.jpg", alt: "JOAYO table display unit" } },
+        { aspect: "16:9", media: { src: "/media/joayo/joayo-wobbler.jpg", alt: "JOAYO wobbler and gondola display in aisle" } },
+      ] },
+      { type: "frame", aspect: "16:9",
+        media: { src: "/media/joayo/joayo-storyboard.jpg", alt: "Frame from the JOAYO storyboard" } },
+    ],
+  },
+  {
+    slug: "ensure-loyalty-program",
+    title: "Ensure Loyalty Program",
+    client: "Ensure",
+    role: "Art Director",
+    discipline: "art-direction",
+    year: "2024",
+    studio: "Dentsu",
+    media: {
+      src: "/media/ensure/ensure-loyalty-1.jpg",
+      alt: "Ensure Gold Loyalty Program key visual",
+      width: 1414,
+      height: 2000,
+    },
+    gallery: [
+      { type: "pair", variant: "even", items: [
+        { aspect: "4:5", media: { src: "/media/ensure/ensure-loyalty-2.jpg", alt: "Ensure Loyalty Program visual with a voucher offer" } },
+        { aspect: "4:5", media: { src: "/media/ensure/ensure-loyalty-3.jpg", alt: "Ensure Loyalty Program visual with two people drinking Ensure" } },
+      ] },
+      { type: "pair", variant: "even", gap: "pause", items: [
+        { aspect: "9:16", media: { src: "/media/ensure/ensure-story-1.jpg", alt: "Ensure story frame — a man holding a glass beside an exercise bike" } },
+        { aspect: "9:16", media: { src: "/media/ensure/ensure-story-2.jpg", alt: "Ensure story frame — join the Loyalty Program" } },
+      ] },
+      { type: "frame", aspect: "16:9", gap: "pause",
+        media: { src: "/media/ensure/ensure-storyboard-1.jpg", alt: "Storyboard frame explaining how to join the programme" } },
+      { type: "detail", align: "right", aspect: "16:9",
+        media: { src: "/media/ensure/ensure-storyboard-2.jpg", alt: "Storyboard frame — entering a verification code on a phone" } },
+    ],
+  },
+  {
+    /* `role` is unset: the owner supplied artwork and year for this project but
+       not a contribution, and rule 1a says unset is correct rather than a guess. */
+    slug: "takeda-cegah-dbd",
+    title: "Cegah DBD",
+    client: "Takeda",
+    discipline: "graphic-design",
+    year: "2026",
+    media: {
+      src: "/media/takeda/takeda-family.jpg",
+      alt: "Dengue prevention key visual — a family on a sofa",
+      width: 2000,
+      height: 1000,
+    },
+    gallery: [
+      { type: "pair", variant: "even", items: [
+        { aspect: "16:9", media: { src: "/media/takeda/takeda-anak.jpg", alt: "Dengue prevention key visual addressing children" } },
+        { aspect: "16:9", media: { src: "/media/takeda/takeda-ibu.jpg", alt: "Dengue prevention key visual addressing mothers" } },
+      ] },
+      { type: "pair", variant: "even", gap: "pause", items: [
+        { aspect: "16:9", media: { src: "/media/takeda/takeda-ayah.jpg", alt: "Dengue prevention key visual addressing fathers" } },
+        { aspect: "16:9", media: { src: "/media/takeda/takeda-nenek.jpg", alt: "Dengue prevention key visual addressing older adults" } },
+      ] },
+    ],
+  }
 ];
 
 /** Filter labels for the catalog page. `all` is prepended by the UI. */
