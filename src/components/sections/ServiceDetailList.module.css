@@ -70,3 +70,13 @@
     padding: 26px 0;
   }
 }
+
+/* Grouped capabilities — see ServiceSection.module.css. Same treatment so the
+   homepage and /services read as one list. */
+.items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}

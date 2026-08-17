@@ -29,7 +29,17 @@ export function ServiceSection({ id, title, services }: ServiceSectionProps) {
               {service.num}
             </span>
             <dt className={styles.title}>{service.title}</dt>
-            <dd className={styles.desc}>{service.description}</dd>
+            <dd className={styles.desc}>
+              {service.items ? (
+                <ul className={styles.items}>
+                  {service.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                service.description
+              )}
+            </dd>
           </div>
         ))}
       </dl>

@@ -35,6 +35,29 @@ export type Discipline =
   | "publishing";
 
 /**
+ * Editorial categories for the Features Work index.
+ *
+ * Deliberately separate from `Discipline`: discipline describes the kind of
+ * practice, this describes the kind of output a visitor is browsing for. A
+ * project may legitimately have no category — it then appears only under ALL
+ * rather than being forced into a bucket it does not belong to.
+ */
+export type WorkCategory =
+  | "tvc-dvc"
+  | "photo-videography"
+  | "key-visual"
+  | "social-design"
+  | "social-video"
+  | "ai-video";
+
+/**
+ * Whether the project's work is film or still. Drives the ALL rows only.
+ * `video` does NOT imply a bundled file or an embed — most of these are
+ * represented by an extracted poster still, which is the existing behaviour.
+ */
+export type MediaKind = "static" | "video";
+
+/**
  * Frame shape for gallery media. The detail page mixes ratios deliberately, so
  * this is per-item rather than a page-level setting.
  */
@@ -141,6 +164,10 @@ export interface Project {
 
   /** Broader framing than `role`, e.g. "Brand Film", "Key Visual". */
   category?: string;
+  /** Editorial category for the Features Work filter. Optional by design. */
+  workCategory?: WorkCategory;
+  /** Film or still, for the ALL rows. Optional; treated as `static` when unset. */
+  mediaKind?: MediaKind;
   /** Detail-page hero. Falls back to `media` when absent. */
   heroMedia?: MediaAsset;
   /** Short statement — the Intro left column. Falls back to `summary`. */
@@ -178,8 +205,16 @@ export interface Service {
   /** Two-digit index as shown in the design: "01". */
   num: string;
   title: string;
-  /** One line. This is what the homepage capability list shows. */
-  description: string;
+  /**
+   * One line. Optional: a grouped capability uses `items` instead of a gloss,
+   * and the list renders whichever is present.
+   */
+  description?: string;
+  /**
+   * The capabilities inside this group. Rendered as a plain list in the same
+   * rule-separated row — no cards, no icons, no new treatment.
+   */
+  items?: string[];
   /**
    * Longer passage, Services page only. Renders only when present, so the
    * homepage list is unaffected.

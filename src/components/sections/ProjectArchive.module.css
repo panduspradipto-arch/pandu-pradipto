@@ -223,3 +223,67 @@
     transition: none;
   }
 }
+
+/* ---- ALL rows ----
+ * Four rails, each scrolling on its own axis. The page never gains a horizontal
+ * one: every rail is its own overflow context and the section stays inside the
+ * gutter. No new visual language — same card, same rule, same type scale.
+ */
+.row {
+  margin-bottom: var(--rhythm-lg, 96px);
+}
+
+.rowHeading {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.rail {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 8px;
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  /* The scrollbar is chrome the design does not have; the rail reads as work. */
+  scrollbar-width: none;
+}
+
+.rail::-webkit-scrollbar {
+  display: none;
+}
+
+/* A visible focus ring only when reached by keyboard, so the rail is operable
+   without becoming a boxed component. */
+.rail:focus-visible {
+  outline: 1px solid var(--fg);
+  outline-offset: 4px;
+}
+
+.railItem {
+  flex: 0 0 auto;
+  width: 32vw;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 900px) {
+  .railItem {
+    width: 46vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .railItem {
+    width: 70vw;
+  }
+}

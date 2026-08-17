@@ -30,14 +30,14 @@ export default function HomePage() {
           width: 1264,
           height: 842,
         }}
-        primaryCta={{ label: "View Selected Work", href: "/work" }}
+        primaryCta={{ label: "View Features Work", href: "/work" }}
         secondaryCta={{ label: "Let's Work Together", href: "#contact" }}
       />
 
       <Reveal>
         <WorkSection
           id="work"
-          title="Selected Work"
+          title="Features Work"
           projects={featuredProjects}
           action={{ label: "View all work →", href: "/work" }}
         />

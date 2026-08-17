@@ -62,3 +62,13 @@
     padding-left: 44px;
   }
 }
+
+/* Grouped capabilities. Plain list in the existing description type — no
+   bullets, no cards, no new treatment; the rule-separated row is unchanged. */
+.items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}

@@ -28,8 +28,18 @@ export function ServiceDetailList({ services }: ServiceDetailListProps) {
             </span>
             <dt className={styles.title}>{service.title}</dt>
             <dd className={styles.body}>
-              <span className={styles.summary}>{service.description}</span>
-              {service.detail ? <span className={styles.detail}>{service.detail}</span> : null}
+              {service.items ? (
+                <ul className={styles.items}>
+                  {service.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <>
+                  <span className={styles.summary}>{service.description}</span>
+                  {service.detail ? <span className={styles.detail}>{service.detail}</span> : null}
+                </>
+              )}
             </dd>
           </div>
         ))}

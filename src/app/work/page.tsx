@@ -5,7 +5,7 @@ import { Section } from "@/components/layout/Section";
 import { ProjectArchive } from "@/components/sections/ProjectArchive";
 import { CTASection } from "@/components/sections/CTASection";
 
-import { disciplines, projects } from "@/data/projects";
+import { projects, workCategories } from "@/data/projects";
 import { site } from "@/data/site";
 
 const description =
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <>
-      <PageHeader eyebrow="Work" title="Selected Work" standfirst={description} />
+      <PageHeader eyebrow="Work" title="Features Work" standfirst={description} />
 
       <Section spacing="bottom" labelledBy="archive-heading">
         <h2 id="archive-heading" className="sr-only">
           Project archive
         </h2>
-        <ProjectArchive projects={projects} disciplines={disciplines} />
+        <ProjectArchive projects={projects} categories={workCategories} />
       </Section>
 
       <CTASection
