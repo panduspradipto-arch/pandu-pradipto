@@ -49,7 +49,9 @@ export type WorkCategory =
   | "social-design"
   | "social-video"
   | "ai-video"
-  | "publishing";
+  | "publishing"
+  | "branding"
+  | "storyboard";
 
 /**
  * Whether the project's work is film or still. Drives the ALL rows only.
@@ -165,8 +167,15 @@ export interface Project {
 
   /** Broader framing than `role`, e.g. "Brand Film", "Key Visual". */
   category?: string;
-  /** Editorial category for the Features Work filter. Optional by design. */
-  workCategory?: WorkCategory;
+  /**
+   * Editorial categories for the Features Work filter. Plural because branding
+   * and storyboard are deliverable types that live *inside* campaign projects
+   * rather than being projects of their own — a single value could not say that
+   * a campaign also contains its own identity work or its own boards.
+   *
+   * The first entry is the primary category and is what a card shows.
+   */
+  workCategories?: WorkCategory[];
   /** Film or still, for the ALL rows. Optional; treated as `static` when unset. */
   mediaKind?: MediaKind;
   /** Detail-page hero. Falls back to `media` when absent. */

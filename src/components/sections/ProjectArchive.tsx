@@ -24,17 +24,21 @@ type Filter = "all" | WorkCategory;
  * Filters are derived from the projects actually present — a category with no
  * projects never renders a control, so there are no empty categories.
  *
- * ALL is not a flat list. It splits the same projects four ways by what the
- * work is (film or still) and how it is shaped (portrait or landscape), each
- * row scrolling on its own axis. Nothing is duplicated to do this: the rows are
- * a query over the one project array, and a project appears in exactly one.
+ * ALL is not a flat list. It splits the same projects by what the work is (film
+ * or still) and how it is shaped (portrait, landscape or square), each row
+ * scrolling on its own axis. Nothing is duplicated to do this: the rows are a
+ * query over the one project array, and a project appears in exactly one.
+ *
+ * The category filter is the other axis and is deliberately not exclusive — a
+ * campaign can also be branding or storyboard work, so a project may answer to
+ * more than one control.
  */
 export function ProjectArchive({ projects, categories }: ProjectArchiveProps) {
   const [filter, setFilter] = useState<Filter>("all");
 
   /* Only categories represented in the data become controls. */
   const available = useMemo(() => {
-    const present = new Set(projects.map((p) => p.workCategory).filter(Boolean));
+    const present = new Set(projects.flatMap((p) => p.workCategories ?? []));
     return categories.filter((c) => present.has(c.id));
   }, [projects, categories]);
 
@@ -73,13 +77,18 @@ export function ProjectArchive({ projects, categories }: ProjectArchiveProps) {
   }, [projects]);
 
   const filtered = useMemo(
-    () => (filter === "all" ? projects : projects.filter((p) => p.workCategory === filter)),
+    () =>
+      filter === "all"
+        ? projects
+        : projects.filter((p) => p.workCategories?.includes(filter)),
     [projects, filter],
   );
 
   const labelFor = useMemo(() => {
     const map = new Map(categories.map((c) => [c.id, c.label]));
-    return (id?: WorkCategory) => (id ? (map.get(id) ?? id) : undefined);
+    /* A card shows its primary category only — the first entry. Listing every
+       category on an index card would crowd the line and bury the year. */
+    return (ids?: WorkCategory[]) => (ids?.[0] ? (map.get(ids[0]) ?? ids[0]) : undefined);
   }, [categories]);
 
   /*
@@ -126,7 +135,7 @@ export function ProjectArchive({ projects, categories }: ProjectArchiveProps) {
               would otherwise repeat directly above. */}
           <span className={styles.title}>{project.displayTitle ?? project.title}</span>
           <span className={styles.detail}>
-            {[project.year, labelFor(project.workCategory)].filter(Boolean).join(" · ")}
+            {[project.year, labelFor(project.workCategories)].filter(Boolean).join(" · ")}
           </span>
         </span>
       </span>

@@ -5,7 +5,7 @@ import { Section } from "@/components/layout/Section";
 import { ProjectArchive } from "@/components/sections/ProjectArchive";
 import { CTASection } from "@/components/sections/CTASection";
 
-import { projects, workCategories } from "@/data/projects";
+import { projects, workCategoryList } from "@/data/projects";
 import { site } from "@/data/site";
 
 const description =
@@ -41,7 +41,7 @@ export default function WorkPage() {
         <h2 id="archive-heading" className="sr-only">
           Project archive
         </h2>
-        <ProjectArchive projects={projects} categories={workCategories} />
+        <ProjectArchive projects={projects} categories={workCategoryList} />
       </Section>
 
       <CTASection

@@ -38,7 +38,7 @@ export const projects: Project[] = [
     client: "Bank BRI",
     role: "Art Direction",
     discipline: "art-direction",
-    workCategory: "tvc-dvc",
+    workCategories: ["tvc-dvc"],
     mediaKind: "video",
     /* Owner's file naming is authoritative — file: TVC 2022 - BRI Giro + KV Giro 2024. */
     year: "2022–2024",
@@ -105,7 +105,7 @@ export const projects: Project[] = [
     title: '"Dance" — Campaign Film',
     client: "Cimory",
     discipline: "freelance-creative",
-    workCategory: "tvc-dvc",
+    workCategories: ["tvc-dvc"],
     mediaKind: "video",
     year: "2024",
     media: {
@@ -135,7 +135,7 @@ export const projects: Project[] = [
     title: "Kalbe Farma",
     client: "Woods'",
     discipline: "graphic-design",
-    workCategory: "key-visual",
+    workCategories: ["key-visual"],
     mediaKind: "static",
     year: "2019",
     media: {
@@ -172,7 +172,7 @@ export const projects: Project[] = [
     title: "Two Brand Launches",
     client: "Hotlicks & CGJ",
     discipline: "social-media",
-    workCategory: "social-design",
+    workCategories: ["social-design", "branding"],
     mediaKind: "static",
     /* Owner's file naming is authoritative — file: Branding 2022 Clean & Green; Hotlicks 2023. */
     year: "2022–2023",
@@ -392,7 +392,7 @@ export const projects: Project[] = [
     title: "Ramadan Campaign",
     client: "MLBB",
     discipline: "social-media",
-    workCategory: "ai-video",
+    workCategories: ["ai-video"],
     mediaKind: "video",
     year: "2023",
     media: {
@@ -423,7 +423,7 @@ export const projects: Project[] = [
     title: "Total Solution",
     client: "Rucika",
     discipline: "graphic-design",
-    workCategory: "key-visual",
+    workCategories: ["key-visual", "storyboard"],
     mediaKind: "static",
     year: "2019–20",
     media: {
@@ -506,7 +506,7 @@ export const projects: Project[] = [
     client: "BTN",
     role: "Executive Producer",
     discipline: "executive-producer",
-    workCategory: "tvc-dvc",
+    workCategories: ["tvc-dvc"],
     mediaKind: "video",
     year: "2025",
     media: {
@@ -535,7 +535,7 @@ export const projects: Project[] = [
     client: "Bank Mandiri",
     role: "Art Direction",
     discipline: "art-direction",
-    workCategory: "key-visual",
+    workCategories: ["key-visual"],
     mediaKind: "static",
     /* Owner's file naming is authoritative — file: KV/DVC 2020 - Mandiri Corporate Bank. */
     year: "2020",
@@ -584,7 +584,7 @@ export const projects: Project[] = [
     client: "XL Axiata",
     role: "Art Direction",
     discipline: "art-direction",
-    workCategory: "key-visual",
+    workCategories: ["key-visual"],
     mediaKind: "static",
     /* Owner's file naming is authoritative — file: KV Vertical - XL Business Solution 2019. */
     year: "2019",
@@ -647,7 +647,7 @@ export const projects: Project[] = [
     title: 'Djabesmen — "Ngga Bikin Tekor"',
     client: "Djabesmen",
     discipline: "graphic-design",
-    workCategory: "key-visual",
+    workCategories: ["key-visual"],
     mediaKind: "static",
     year: "2019",
     media: {
@@ -664,7 +664,7 @@ export const projects: Project[] = [
     client: "Prudential",
     role: "Art Director",
     discipline: "art-direction",
-    workCategory: "tvc-dvc",
+    workCategories: ["tvc-dvc"],
     mediaKind: "video",
     year: "2022",
     media: {
@@ -695,7 +695,7 @@ export const projects: Project[] = [
     client: "KitKat",
     role: "Art Director",
     discipline: "art-direction",
-    workCategory: "tvc-dvc",
+    workCategories: ["tvc-dvc"],
     mediaKind: "video",
     year: "2022",
     gallery: [
@@ -733,7 +733,7 @@ export const projects: Project[] = [
     title: "ABC Sirup Ramadan",
     client: "ABC",
     discipline: "graphic-design",
-    workCategory: "tvc-dvc",
+    workCategories: ["tvc-dvc"],
     mediaKind: "video",
     year: "2024",
     media: {
@@ -763,7 +763,7 @@ export const projects: Project[] = [
     client: "Realme",
     role: "Executive Producer",
     discipline: "executive-producer",
-    workCategory: "tvc-dvc",
+    workCategories: ["tvc-dvc"],
     mediaKind: "video",
     year: "2025",
     media: {
@@ -795,7 +795,7 @@ export const projects: Project[] = [
     client: "J&T Express",
     role: "Executive Producer",
     discipline: "executive-producer",
-    workCategory: "photo-videography",
+    workCategories: ["photo-videography"],
     mediaKind: "static",
     year: "2025",
     studio: "Cerahati",
@@ -868,7 +868,7 @@ export const projects: Project[] = [
     displayTitle: "H'var Hair",
     client: "Schwarzkopf Professional",
     discipline: "graphic-design",
-    workCategory: "social-design",
+    workCategories: ["social-design"],
     mediaKind: "static",
     /* Owner's file naming is authoritative — file: Content Video 2023 - Schwarzkopf. */
     year: "2023",
@@ -1023,7 +1023,7 @@ export const projects: Project[] = [
     category: "Beauty & Lifestyle",
     /* Owner-corrected: a social media management engagement, not design work. */
     discipline: "social-media",
-    workCategory: "social-design",
+    workCategories: ["social-design"],
     mediaKind: "static",
     year: "2021",
     summary: "Ongoing social media management for TriPollar skincare devices.",
@@ -1133,7 +1133,7 @@ export const projects: Project[] = [
        role. Corrected per the owner's CV. */
     role: "Senior Art Director",
     discipline: "art-direction",
-    workCategory: "photo-videography",
+    workCategories: ["photo-videography"],
     mediaKind: "static",
     year: "2022–2023",
     summary: "Ramadan CSR campaign content for Ula's retail network.",
@@ -1268,7 +1268,7 @@ export const projects: Project[] = [
        than a project role. Mirrors TriPollar's pattern. */
     role: "Creative Production",
     discipline: "social-media",
-    workCategory: "social-video",
+    workCategories: ["social-video"],
     mediaKind: "video",
     year: "2023–2024",
     media: {
@@ -1305,7 +1305,7 @@ export const projects: Project[] = [
     title: "MLBB Valentine's Day Campaign",
     client: "MLBB",
     discipline: "social-media",
-    workCategory: "tvc-dvc",
+    workCategories: ["tvc-dvc"],
     mediaKind: "video",
     /* Owner's file naming is authoritative — file: DVC 2026 - MLBB Valentine x Zee Asadel. */
     year: "2026",
@@ -1336,7 +1336,7 @@ export const projects: Project[] = [
        Verified from the artwork itself, not inferred. */
     role: "Illustrator",
     discipline: "publishing",
-    workCategory: "publishing",
+    workCategories: ["publishing"],
     mediaKind: "static",
     year: "2026",
     summary: "Children's book illustration and design, published by Pibo.",
@@ -1406,7 +1406,7 @@ export const projects: Project[] = [
     role: "Creative Art Director & Content Production",
     /* Discipline id, not the employment title. See DATA RULES above. */
     discipline: "multimedia",
-    workCategory: "social-video",
+    workCategories: ["social-video"],
     mediaKind: "video",
     year: "2023–2024",
     media: {
@@ -1460,7 +1460,7 @@ export const projects: Project[] = [
     client: "Telon Lang",
     role: "Senior Graphic Design",
     discipline: "graphic-design",
-    workCategory: "key-visual",
+    workCategories: ["key-visual", "branding", "storyboard"],
     mediaKind: "static",
     year: "2018–2019",
     studio: "Dwi Sapta",
@@ -1495,7 +1495,7 @@ export const projects: Project[] = [
     client: "JOAYO",
     role: "Senior Graphic Design",
     discipline: "graphic-design",
-    workCategory: "key-visual",
+    workCategories: ["key-visual", "branding", "storyboard"],
     mediaKind: "static",
     year: "2020",
     studio: "Dwi Sapta",
@@ -1526,7 +1526,7 @@ export const projects: Project[] = [
     client: "Ensure",
     role: "Art Director",
     discipline: "art-direction",
-    workCategory: "social-design",
+    workCategories: ["social-design", "storyboard"],
     mediaKind: "static",
     year: "2024",
     studio: "Dentsu",
@@ -1558,7 +1558,7 @@ export const projects: Project[] = [
     title: "Cegah DBD",
     client: "Takeda",
     discipline: "graphic-design",
-    workCategory: "key-visual",
+    workCategories: ["key-visual"],
     mediaKind: "static",
     year: "2026",
     media: {
@@ -1589,7 +1589,7 @@ export const projects: Project[] = [
     client: "Bank BRI",
     role: "Art Director",
     discipline: "art-direction",
-    workCategory: "key-visual",
+    workCategories: ["key-visual", "branding"],
     mediaKind: "static",
     year: "2021–2024",
     studio: "Maleo & Dentsu",
@@ -1632,7 +1632,7 @@ export const projects: Project[] = [
     client: "Micromine",
     role: "Creative Director",
     discipline: "art-direction",
-    workCategory: "tvc-dvc",
+    workCategories: ["tvc-dvc"],
     mediaKind: "video",
     year: "2023",
     media: {
@@ -1653,7 +1653,7 @@ export const projects: Project[] = [
     client: "Royco",
     role: "Project Manager",
     discipline: "multimedia",
-    workCategory: "tvc-dvc",
+    workCategories: ["tvc-dvc"],
     mediaKind: "video",
     year: "2026",
     studio: "Seven Sunday Films",
@@ -1675,7 +1675,7 @@ export const projects: Project[] = [
     client: "Japota",
     role: "Videographer",
     discipline: "multimedia",
-    workCategory: "photo-videography",
+    workCategories: ["photo-videography"],
     mediaKind: "video",
     year: "2024",
     media: {
@@ -1703,7 +1703,7 @@ export const projects: Project[] = [
     client: "Antangin",
     category: "Pitch",
     discipline: "graphic-design",
-    workCategory: "key-visual",
+    workCategories: ["key-visual"],
     mediaKind: "static",
     year: "2019",
     studio: "Dwi Sapta",
@@ -1720,7 +1720,7 @@ export const projects: Project[] = [
     client: "Balsem Lang",
     category: "Pitch",
     discipline: "graphic-design",
-    workCategory: "key-visual",
+    workCategories: ["key-visual", "branding"],
     mediaKind: "static",
     year: "2020",
     studio: "Dwi Sapta",
@@ -1741,7 +1741,7 @@ export const projects: Project[] = [
     client: "BenStar",
     category: "Pitch",
     discipline: "graphic-design",
-    workCategory: "key-visual",
+    workCategories: ["key-visual"],
     mediaKind: "static",
     year: "2020",
     studio: "Dwi Sapta",
@@ -1758,7 +1758,7 @@ export const projects: Project[] = [
     client: "Daihatsu",
     category: "Pitch",
     discipline: "graphic-design",
-    workCategory: "key-visual",
+    workCategories: ["key-visual", "branding"],
     mediaKind: "static",
     year: "2018–2019",
     studio: "Dwi Sapta",
@@ -1775,7 +1775,7 @@ export const projects: Project[] = [
     client: "Energen",
     category: "Pitch",
     discipline: "graphic-design",
-    workCategory: "key-visual",
+    workCategories: ["key-visual"],
     mediaKind: "static",
     year: "2021",
     studio: "Dwi Sapta",
@@ -1788,7 +1788,7 @@ export const projects: Project[] = [
     client: "Sania",
     category: "Pitch",
     discipline: "graphic-design",
-    workCategory: "key-visual",
+    workCategories: ["key-visual"],
     mediaKind: "static",
     year: "2019",
     studio: "Dwi Sapta",
@@ -1802,7 +1802,7 @@ export const projects: Project[] = [
  * Features Work categories, in display order. ALL is rendered by the component
  * itself and is not listed here.
  */
-export const workCategories: { id: WorkCategory; label: string }[] = [
+export const workCategoryList: { id: WorkCategory; label: string }[] = [
   { id: "tvc-dvc", label: "TVC & DVC" },
   { id: "photo-videography", label: "Photo & Videography" },
   { id: "key-visual", label: "Key Visual Design" },
@@ -1810,6 +1810,8 @@ export const workCategories: { id: WorkCategory; label: string }[] = [
   { id: "social-video", label: "Social Media Video" },
   { id: "ai-video", label: "AI Video" },
   { id: "publishing", label: "Publishing" },
+  { id: "branding", label: "Branding" },
+  { id: "storyboard", label: "Storyboard" },
 ];
 
 export const disciplines: { id: Discipline; label: string }[] = [
