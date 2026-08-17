@@ -26,7 +26,9 @@ export function ProjectIntro({ project }: ProjectIntroProps) {
     { label: "Approach", body: project.approach },
   ].filter((f): f is { label: string; body: string } => Boolean(f.body));
 
-  if (!statement && fields.length === 0) return null;
+  const doc = project.document;
+
+  if (!statement && fields.length === 0 && !doc) return null;
 
   return (
     <Section labelledBy="intro-heading" className={styles.section}>
@@ -45,6 +47,17 @@ export function ProjectIntro({ project }: ProjectIntroProps) {
             </div>
           ))}
         </dl>
+      ) : null}
+
+      {/* A published artefact the visitor can read in full. Plain text link in
+          the existing rule-underline treatment — no button, no download chrome. */}
+      {doc ? (
+        <p className={styles.document}>
+          <a className={styles.documentLink} href={doc.src} target="_blank" rel="noopener">
+            {doc.label}
+          </a>
+          {doc.note ? <span className={styles.documentNote}> — {doc.note}</span> : null}
+        </p>
       ) : null}
     </Section>
   );

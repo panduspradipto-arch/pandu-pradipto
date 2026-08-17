@@ -199,6 +199,12 @@ export interface Project {
   roleSummary?: string;
 
   credits?: Credit[];
+  /**
+   * A published document the project can be read in full — a book, a deck.
+   * Optional and rare: only use it where the rights to publish the whole
+   * artefact are held, not to dump source files.
+   */
+  document?: { src: string; label: string; note?: string };
   result?: ProjectResult;
 }
 

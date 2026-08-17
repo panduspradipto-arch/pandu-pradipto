@@ -1353,7 +1353,18 @@ export const projects: Project[] = [
       src: "/media/anika-worry-monster/cover.jpg",
       alt: "Cover of Anika & the Worry Monster",
     },
-    /* Cover and back cover only — interior pages are not published. */
+    /*
+     * The gallery still shows cover and back cover only. The full book is
+     * offered as a PDF instead of being broken into page images, so it is read
+     * as the artefact it is. Published with the owner's confirmation that the
+     * publisher's permission is held — the book's own credit page reserves all
+     * rights to PT PiBo Media Anak.
+     */
+    document: {
+      src: "/publishing/anika-worry-monster.pdf",
+      label: "Read the book",
+      note: "PDF · 20 pages",
+    },
     gallery: [
       {
         type: "pair",

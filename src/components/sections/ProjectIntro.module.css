@@ -69,3 +69,31 @@
     max-width: none;
   }
 }
+
+/* Published document link. Inherits the meta type and the underline treatment
+   used elsewhere — deliberately not a button, since this is a reference, not a
+   call to action. */
+.document {
+  margin: 32px 0 0;
+  font-size: var(--text-meta);
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.documentLink {
+  color: var(--fg);
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--fg);
+  padding-bottom: 2px;
+  transition: opacity var(--duration-base) var(--ease);
+}
+
+.documentLink:hover {
+  opacity: 0.7;
+}
+
+.documentNote {
+  color: var(--fg-muted);
+}
