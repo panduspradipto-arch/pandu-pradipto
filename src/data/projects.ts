@@ -1794,6 +1794,37 @@ export const projects: Project[] = [
     studio: "Dwi Sapta",
     summary: "Pitch project.",
     media: { src: "/media/sania/sania-terbaik-dari-ibu.jpg", alt: "Sania cooking oil key visual composed as a trophy of vegetables", width: 1413, height: 2000 },
+  },
+  {
+    /*
+     * Year confirmed by the owner and legible in the artwork itself — the
+     * frames carry "Grill Master Indonesia 2025". Poster stills stand in for the
+     * films: fifteen episodes exist, none with a public URL.
+     */
+    slug: "djangos-grill-master",
+    title: "Grill Master Indonesia",
+    client: "Djangos",
+    role: "Producer",
+    discipline: "multimedia",
+    year: "2025",
+    workCategories: ["social-video"],
+    mediaKind: "video",
+    media: {
+      src: "/media/djangos/djangos-host.jpg",
+      alt: "Still from Grill Master Indonesia — the host presenting to camera",
+      width: 1080,
+      height: 1920,
+    },
+    gallery: [
+      { type: "pair", variant: "even", items: [
+        { aspect: "9:16", media: { src: "/media/djangos/djangos-fire.jpg", alt: "Still — wood burning down to coals" } },
+        { aspect: "9:16", media: { src: "/media/djangos/djangos-judge-card.jpg", alt: "Title card introducing a guest judge" } },
+      ] },
+      { type: "pair", variant: "even", gap: "pause", items: [
+        { aspect: "9:16", media: { src: "/media/djangos/djangos-plating.jpg", alt: "Still — a competitor carrying a plated dish" } },
+        { aspect: "9:16", media: { src: "/media/djangos/djangos-brisket.jpg", alt: "Still — gloved hands handling wrapped brisket" } },
+      ] },
+    ],
   }
 ];
 
