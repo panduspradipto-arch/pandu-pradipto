@@ -1,5 +1,6 @@
 "use client";
 
+import type React from "react";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Project, WorkCategory } from "@/types/content";
@@ -109,7 +110,20 @@ export function ProjectArchive({ projects, categories }: ProjectArchiveProps) {
         [project.client, project.role, project.year].filter(Boolean).join(", "),
       ].join(" ")}
     >
-      <span className={styles.frame}>
+      {/*
+        The frame takes the artwork's own ratio so nothing is cropped. Portrait
+        work in particular was losing most of its height to a fixed 4:3 box, and
+        the house rule is that portrait work is never re-cropped to fit a
+        container. Falls back to 4:3 when a cover carries no dimensions.
+      */}
+      <span
+        className={styles.frame}
+        style={
+          project.media?.width && project.media?.height
+            ? ({ "--frame-ratio": `${project.media.width} / ${project.media.height}` } as React.CSSProperties)
+            : undefined
+        }
+      >
         {hasArtwork(project.slug) ? (
           <MediaSlot
             media={project.media}

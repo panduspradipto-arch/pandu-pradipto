@@ -77,6 +77,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 64px 32px;
+  /* Cards now vary in height because each keeps its own ratio; hang them from
+     the top of the row rather than stretching them back to a common box. */
+  align-items: start;
 }
 
 .item {
@@ -91,7 +94,7 @@
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: var(--frame-ratio, 4 / 3);
   overflow: hidden;
   background: #141312;
 }
@@ -274,6 +277,7 @@
   width: 32vw;
   min-width: 0;
   scroll-snap-align: start;
+  align-self: start;
 }
 
 @media (max-width: 900px) {
