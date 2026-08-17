@@ -1336,6 +1336,8 @@ export const projects: Project[] = [
        Verified from the artwork itself, not inferred. */
     role: "Illustrator",
     discipline: "publishing",
+    workCategory: "publishing",
+    mediaKind: "static",
     year: "2026",
     summary: "Children's book illustration and design, published by Pibo.",
     /* The archive card reads `media`; `heroMedia` only feeds the detail
@@ -1796,6 +1798,7 @@ export const workCategories: { id: WorkCategory; label: string }[] = [
   { id: "social-design", label: "Social Media Design" },
   { id: "social-video", label: "Social Media Video" },
   { id: "ai-video", label: "AI Video" },
+  { id: "publishing", label: "Publishing" },
 ];
 
 export const disciplines: { id: Discipline; label: string }[] = [

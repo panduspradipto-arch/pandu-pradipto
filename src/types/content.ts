@@ -48,7 +48,8 @@ export type WorkCategory =
   | "key-visual"
   | "social-design"
   | "social-video"
-  | "ai-video";
+  | "ai-video"
+  | "publishing";
 
 /**
  * Whether the project's work is film or still. Drives the ALL rows only.

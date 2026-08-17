@@ -40,39 +40,35 @@ export function ProjectArchive({ projects, categories }: ProjectArchiveProps) {
 
   /*
    * Orientation comes from the cover's real pixel dimensions, never a filename.
-   * Square counts as horizontal: the alternative is to invent a rule for it, and
-   * a 1:1 social frame sits more comfortably in a landscape rail than a portrait
-   * one. `mediaKind` is explicit in the data and defaults to `static`.
+   * Square is its own row rather than being folded into landscape — a 1:1 social
+   * frame is a distinct format here, not a wide one, so it gets its own rail and
+   * no rule has to be invented for it. `mediaKind` is explicit in the data and
+   * defaults to `static`.
    */
   const rows = useMemo(() => {
-    const isVertical = (p: Project) => {
+    const shapeOf = (p: Project): "vertical" | "horizontal" | "square" => {
       const m = p.media;
-      if (!m?.width || !m?.height) return false;
-      return m.height > m.width;
+      if (!m?.width || !m?.height) return "horizontal";
+      if (m.height > m.width) return "vertical";
+      if (m.width > m.height) return "horizontal";
+      return "square";
     };
     const isVideo = (p: Project) => p.mediaKind === "video";
+    const pick = (shape: ReturnType<typeof shapeOf>, video: boolean) =>
+      projects.filter((p) => shapeOf(p) === shape && isVideo(p) === video);
 
     return [
+      { id: "vertical-static", label: "Vertical Static", items: pick("vertical", false) },
+      { id: "horizontal-static", label: "Horizontal Static", items: pick("horizontal", false) },
+      /* Square sits between the stills and the film: it is mostly social feed
+         work, and reading it after the two static rails keeps that grouping. */
       {
-        id: "vertical-static",
-        label: "Vertical Static",
-        items: projects.filter((p) => !isVideo(p) && isVertical(p)),
+        id: "square",
+        label: "Square",
+        items: projects.filter((p) => shapeOf(p) === "square"),
       },
-      {
-        id: "horizontal-static",
-        label: "Horizontal Static",
-        items: projects.filter((p) => !isVideo(p) && !isVertical(p)),
-      },
-      {
-        id: "vertical-video",
-        label: "Vertical Video",
-        items: projects.filter((p) => isVideo(p) && isVertical(p)),
-      },
-      {
-        id: "horizontal-video",
-        label: "Horizontal Video",
-        items: projects.filter((p) => isVideo(p) && !isVertical(p)),
-      },
+      { id: "vertical-video", label: "Vertical Video", items: pick("vertical", true) },
+      { id: "horizontal-video", label: "Horizontal Video", items: pick("horizontal", true) },
     ].filter((r) => r.items.length > 0);
   }, [projects]);
 
